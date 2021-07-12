@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
     <head>
-        <title>AotOR</title>
-        <meta name="description" content="AotOR">
+        <title>SWRPG Destiny Point Tracker</title>
+        <meta name="description" content="Keep track of destiny points for your star wars ffg games.">
         <meta name="author" content="Ryan Miller">
-        <meta name="keywords" content="AOTOR">
+        <meta name="keywords" content="SWRPG, FFG, AOTOR, Star Wars, destiny points">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <script src="scripts.js"></script>
+        <script>checkdarkpref()</script>
         <div class="maincont">
             <div id="destinytracker" class="destinytracker">
                 <h1 class="counterheading">USED</h1>
@@ -42,6 +43,8 @@
                 <br>
                 <button class="button button3" onclick="togglehide('destinytracker','inline-block')">TOGGLE USAGE TRACKER</button>
                 <br>
+                <button class="button button3" onclick="darkmodetoggle()">Toggle Dark/Light Mode</button>
+                <br>
                 <button class="button button3" onclick="update_counter('reset')">RESET USED</button>
                 <br>
                 <button class="button button3" onclick="location.reload();">RESET PAGE</button>      
@@ -54,8 +57,11 @@
             <li><a href="guides.html#MODGUIDE" target="_blank">Modification Guide</a> - Some aspects can be modified with no knowledge of programming.</li>
             <li><a href="#" target="_blank">Other Tools</a> - Other tools, apps, and things made by me.</li>
         </ul>
-        <p>The token images are adapted from <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> (originaly made by <a href="https://rpgsessions.com/" target="_blank">Unbound Legends</a> and modified for use in this tool. This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
-        <p>Created by <a href="#" target="_blank">Ryan Miller</a>.</p>
-        <p>I am not associated with FFG Star Wars</p>
+        <hr>
+        <div style="font-size: smaller;">
+            <p>The token images are adapted from <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> (originaly made by <a href="https://rpgsessions.com/" target="_blank">Unbound Legends</a> and modified for use in this tool. This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
+            <p>Created by <a href="https://github.com/Aerilym" target="_blank">Ryan Miller</a>.</p>
+            <p>I am not associated with FFG Star Wars</p>
+        </div>
     </body>
 </html>
