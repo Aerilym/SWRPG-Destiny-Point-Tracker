@@ -35,12 +35,12 @@ function change_destiny(destinyID){
     imgname = destinypoint.src.slice(-9)
     console.log(imgname)
     if (imgname == 'dark0.svg'){
-        destinypoint.src = 'light.svg'
+        destinypoint.src = 'images/light.svg'
         update_counter('dark')
         update_number('dark', '-')
         update_number('light', '+')
     } else if (imgname == 'light.svg') {
-        destinypoint.src = 'dark0.svg'
+        destinypoint.src = 'images/dark0.svg'
         update_counter('light')
         update_number('dark', '+')
         update_number('light', '-')
@@ -60,7 +60,7 @@ function add_destiny(){
     destinyimage.id = 'destiny' + numpoints
     destinyimage.className = 'destinysvg'
     destinypoint.appendChild(destinyimage)
-    destinyimage.src = 'dark0.svg'
+    destinyimage.src = 'images/dark0.svg'
     var destinytray = document.getElementById('destinytray')
     destinytray.appendChild(destinypoint)
     update_number('dark', '+')
@@ -69,9 +69,9 @@ function add_destiny(){
 function remove_destiny(){
     var destinytray = document.getElementById('destinytray')
     if (destinytray.lastChild.className != 'counterheading'){
-        if (destinytray.lastChild.firstChild.src.slice(-9) == 'dark0.svg'){
+        if (destinytray.lastChild.firstChild.src.slice(-9) == 'images/dark0.svg'){
             update_number('dark','-')
-        } else if (destinytray.lastChild.firstChild.src.slice(-9) == 'light.svg'){
+        } else if (destinytray.lastChild.firstChild.src.slice(-9) == 'images/light.svg'){
             update_number('light','-')
         }
         destinytray.removeChild(destinytray.lastChild);
