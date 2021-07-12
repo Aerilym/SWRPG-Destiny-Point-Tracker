@@ -110,12 +110,4 @@ body{
     background-color: #008CBA;
     color: white;
 }
-
-.darktokenbg{
-  background-image: url(dark0.svg);
-}
-
-.lighttokenbg{
-  background-image: url(light.svg);
-}
   
