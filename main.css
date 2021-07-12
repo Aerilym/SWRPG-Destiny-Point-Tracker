@@ -52,8 +52,8 @@ body{
 }
 
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
+    min-height: 100%;
+    min-height: 100vh;
   
     display: flex;
     align-items: center;
@@ -64,8 +64,6 @@ body{
     align-items: center;
     margin-bottom: 100px;
 }
-
-
 
 .button {
     border: none;
@@ -78,38 +76,46 @@ body{
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-  }
+}
   
-  .button1 {
+.button1 {
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
-  }
+}
   
-  .button1:hover {
+.button1:hover {
     background-color: #4CAF50;
     color: white;
-  }
+}
   
-  .button2 {
+.button2 {
     background-color: white;
     color: black;
     border: 2px solid #ba0000;
-  }
+}
   
-  .button2:hover {
+.button2:hover {
     background-color: #ba0000;
     color: white;
-  }
+}
 
-  .button3 {
+.button3 {
     background-color: white;
     color: black;
     border: 2px solid #008CBA;
-  }
+}
   
-  .button3:hover {
+.button3:hover {
     background-color: #008CBA;
     color: white;
-  }
+}
+
+.darktokenbg{
+  background-image: url(dark0.svg);
+}
+
+.lighttokenbg{
+  background-image: url(light.svg);
+}
   
