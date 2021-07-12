@@ -1,0 +1,115 @@
+body{
+    background-color: rgba(0, 0, 0, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.destinysvg{
+    width: 172px;
+    margin: 1px;
+}
+
+.destinytray{
+    display: inline-block;
+}
+
+.counterimg{
+    background-size: 90px;
+    width: 90px;
+    height: 90px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.countertxt{
+    color: #eee;
+    font-weight: bold;
+    font-size: 62px;
+    -webkit-text-stroke: 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counterheading{
+    margin: 0px;
+    color: #eee;
+    font-weight: bold;
+    font-size: 36px;
+    -webkit-text-stroke: 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destinytracker{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.destinypoint{
+    display: inline;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+}
+
+.maincont{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #ba0000;
+  }
+  
+  .button2:hover {
+    background-color: #ba0000;
+    color: white;
+  }
+
+  .button3 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .button3:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
