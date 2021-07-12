@@ -67,7 +67,7 @@ body.darkmode{
 .maincont{
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 
 .button {
