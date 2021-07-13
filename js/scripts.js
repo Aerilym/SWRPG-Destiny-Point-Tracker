@@ -68,14 +68,18 @@ function eyemover(position){
     }
 }
 
-function deleteeye(){
-    var answer = window.confirm("Are you sure? This will remove the eye and hide all the extra information below the app. The only way to access the buttons will be to refresh the page (restart).");
-    if (answer) {
-        var eye = document.getElementById('hidebutton')
-        togglehide('settings','block')
-        eye.remove()
-    }
-    else {
-        console.log('no')
+function deleteeye(source){
+    if (source != 'key'){
+        var answer = window.confirm("Are you sure? This will hide the eye button. You will only be able to use the hotkey to hide and unhide the buttons and information (SHIFT+H)");
+        if (answer) {
+            togglehide('hidebutton','block')
+            eyemover('')
+        }
+        else {
+            console.log('no')
+        }
+    } else {
+        togglehide('hidebutton','block')
+        eyemover('')
     }
 }

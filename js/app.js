@@ -69,10 +69,10 @@ function add_destiny(){
 function remove_destiny(){
     var destinytray = document.getElementById('destinytray')
     if (destinytray.lastChild.className != 'counterheading'){
-        if (destinytray.lastChild.firstChild.src.slice(-9) == 'images/dark0.svg'){
-            update_number('dark','-')
-        } else if (destinytray.lastChild.firstChild.src.slice(-9) == 'images/light.svg'){
-            update_number('light','-')
+        if (destinytray.lastChild.firstChild.src.slice(-9) == 'dark0.svg'){
+            update_number('dark', '-')
+        } else if (destinytray.lastChild.firstChild.src.slice(-9) == 'light.svg'){
+            update_number('light', '-')
         }
         destinytray.removeChild(destinytray.lastChild);
     }
@@ -81,4 +81,41 @@ function remove_destiny(){
         togglehide('destinypointsheading','flex')
     }
 
+}
+
+function flip(goal) {
+    var darkcount = parseInt(document.getElementById('darknumber').innerText)
+    var lightcount = parseInt(document.getElementById('lightnumber').innerText)
+    var destinytray = document.getElementById('destinytray')
+    var tokencount = darkcount + lightcount
+    const tokens = destinytray.children
+    if (goal == 'dark'){
+        if (lightcount == 0){
+            return false
+        }
+        let i = tokencount
+        while (i >= 0) {
+            srcslice = tokens[i].firstChild.src.slice(-9)
+            tokenID = tokens[i].firstChild.id
+            if (srcslice == 'light.svg'){
+                change_destiny(tokenID)
+                return false
+            }
+            i--;
+          }
+    } else if (goal == 'light'){
+        if (darkcount == 0){
+            return false
+        }
+        let i = 1
+        while (i <= tokencount) {
+            srcslice = tokens[i].firstChild.src.slice(-9)
+            tokenID = tokens[i].firstChild.id
+            if (srcslice == 'dark0.svg'){
+                change_destiny(tokenID)
+                return false
+            }
+            i++;
+          }
+    }
 }
