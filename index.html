@@ -45,12 +45,14 @@
             <hr>
             <div style="display: inline-flex;">
                 <div class="buttoncontainer">
-                    <h1>Buttons & Info</h1>
-                    <button class="button buttong" onclick="add_destiny()">+</button>
-                    <button class="button buttonr" onclick="remove_destiny()">-</button>
+                    <h2>Destiny Controls</h2>
+                    <button class="button buttong symbolcontrol" onclick="add_destiny()">+</button>
                     <button class="button buttonu" onclick="flip('light')">flip to light</button>
+                    <br>
+                    <button class="button buttonr symbolcontrol" onclick="remove_destiny()">-</button>
                     <button class="button buttonu" onclick="flip('dark')">flip to dark</button>
                     <br>
+                    <h2>Preferences</h2>
                     <button class="button buttonu" onclick="togglehide('destinynumber','inline-block')">TOGGLE NUMBER COUNTER</button>
                     <br>
                     <button class="button buttonu" onclick="togglehide('destinytracker','inline-block')">TOGGLE USAGE TRACKER</button>
@@ -59,15 +61,13 @@
                     <br>
                     <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
                     <br>
-                    Move Eye:<br><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
+                    <h2>Eye Button Movement</h2><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
                     <br>
                     <button class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
                     <br>
                     <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
                     <br>
-                    <button class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">HIDE/UNHIDE EYE</button>
-                    <br>
-                    <button class="button buttonu" onclick="location.reload();">RESET PAGE</button>      
+                    <button class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">HIDE/UNHIDE EYE</button>    
                 </div>
                 <div class="keybindcontainer">
                     <h1>Keybinds</h1>
@@ -109,6 +109,7 @@
                           </tr>
                         </table>
                     </table>
+                    NOTE: If a keybind isn't working, try using <kbd>ctrl</kbd> in place of <kbd>shift</kbd>. Eg. Instead of <kbd>shift + up</kbd> try <kbd>ctrl + up</kbd>
                 </div>
 
             </div>

@@ -67,7 +67,7 @@ body.darkmode{
 .maincont{
     display: flex;
     align-items: center;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
 }
 
 .button {
@@ -178,9 +178,11 @@ body.darkmode{
     display: inline-block;
 }
 
-.keybindtable{
-}
-
 .keybindtable td{
     padding: 6px 12px;
+}
+
+.symbolcontrol{
+    font-size: larger;
+    width: 60px;
 }
