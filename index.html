@@ -38,9 +38,9 @@
                 <h1 id="destinypointsheading" class="counterheading" style="display: none;">DESTINY POINTS</h1> 
             </div>
         </div>
-        <a href="#" onclick="togglehide('settings','block')"><div class="eye"></div></a>
-        <hr>
-        <div id="settings">
+        <div id="hidebutton" class=""><a href="#" onclick="togglehide('settings','block')"><div class="eye"></div></a></div>
+        <div id="settings"> 
+            <hr>
             <div>
                 <button class="button buttong" onclick="add_destiny()">+</button>
                 <button class="button buttonr" onclick="remove_destiny()">-</button>
@@ -52,6 +52,14 @@
                 <button class="button buttonu" onclick="darkmodetoggle()">TOGGLE DARK MODE</button>
                 <br>
                 <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
+                <br>
+                Move Eye:<br><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
+                <br>
+                <button class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
+                <br>
+                <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
+                <br>
+                <button class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">CLICK AND DELETE EYE</button>
                 <br>
                 <button class="button buttonu" onclick="location.reload();">RESET PAGE</button>      
             </div>

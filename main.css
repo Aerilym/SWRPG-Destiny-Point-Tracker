@@ -119,8 +119,8 @@ body.darkmode{
 .eye {
     /* SOURCE: https://codepen.io/wentin/pen/mezPVw */
     background-color: #4d4d4d;
-    width: 26px;
-    height: 26px;
+    width: 16px;
+    height: 16px;
     border: solid 2px #000;
     border-radius: 75% 15%;
     position: relative;
@@ -131,10 +131,39 @@ body.darkmode{
     content: '';
     display: block;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border: solid 2px #000;
+    width: 6px;
+    height: 6px;
+    border: solid 1px #000;
     border-radius: 50%;
-    left: 6px;
-    top: 6px;
+    left: 4px;
+    top: 4px;
+}
+
+.topleft{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.topright{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.bottomleft{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.bottomright{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.eyemover{
+    width: 70px;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(209, 209, 209);
+    border: 2px solid #4d4d44
 }

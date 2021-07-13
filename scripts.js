@@ -52,3 +52,30 @@ function checkdarkpref(){
         document.cookie = "darkmodepref=False; expires=Thu, 18 Dec 2030 12:00:00 UTC";
     }
 }
+
+function eyemover(position){
+    var eye = document.getElementById('hidebutton')
+    if (position == 'tl'){
+        eye.className = 'topleft'
+    } else if (position == 'tr'){
+        eye.className = 'topright'
+    } else if (position == 'bl'){
+        eye.className = 'bottomleft'
+    } else if (position == 'br'){
+        eye.className = 'bottomright'
+    } else {
+        eye.className = ''
+    }
+}
+
+function deleteeye(){
+    var answer = window.confirm("Are you sure? This will remove the eye and hide all the extra information below the app. The only way to access the buttons will be to refresh the page (restart).");
+    if (answer) {
+        var eye = document.getElementById('hidebutton')
+        togglehide('settings','block')
+        eye.remove()
+    }
+    else {
+        console.log('no')
+    }
+}
