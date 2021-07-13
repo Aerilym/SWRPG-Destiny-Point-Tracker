@@ -31,13 +31,13 @@ This works with the online version or a downloaded version.
 8. You should keep this "interact" window open so you can flip the destiny points between light and dark during the game (this can be done by clicking on the point you wish to flip)
 
     NOTE: If you change any variables of the browser source (in the "properties" menu) the source with refresh and you will lose any changes you have made to the app.
-    
+
     NOTE: There are options available to move the "eye" button to other parts of the page, this is useful if you wish to place the eye somewhere it won't be seen on OBS (like off the screen/canvas).
 
 ### Modification Guide
 
 * **Hiding things -** Parts of the tools can be hidden or shown using the available buttons. Try them out. Everything other than the tool can also be hidden using the eye icon.
-* **Changing the destiny point images -** The image tokens used for dark and light side points can be change by replacing the 'dark0.sgv' and 'light.svg' files with sgv images of your choice. If you're willing to change some lines of code: open index.html and replace all occurrences of 'dark0.sgv' and 'light.svg' with the respective file names your images have. This allows you to use any valid image format (like png, jpg, webp, jpeg, gif, and more).
+* **Changing the destiny point images -** The image tokens used for dark and light side points can be change by replacing the `dark0.sgv` and `light.svg` files with images of your choice. If you're willing to change some lines of code: open index.html and replace all occurrences of `dark0.sgv` and `light.svg` with the respective file names your images have. This allows you to use [any valid web image format](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#supported_image_formats).
 
     NOTE: currently the image file names must be 9 characters long including the file extension (so your new file names much have the same length as the original file names) Similar to the file name change, if you replace all occurrences of '-9' to the length of your new file names, you can use any file name length (both files need to have the same file name length).
 
