@@ -83,36 +83,58 @@ body.darkmode{
     cursor: pointer;
 }
   
-.button1 {
-    background-color: white;
+.buttong {
+    background-color: rgb(215, 255, 215);
     color: black;
     border: 2px solid #4CAF50;
 }
   
-.button1:hover {
+.buttong:hover {
     background-color: #4CAF50;
     color: white;
 }
   
-.button2 {
-    background-color: white;
+.buttonr {
+    background-color: rgb(255, 215, 215);
     color: black;
     border: 2px solid #ba0000;
 }
   
-.button2:hover {
+.buttonr:hover {
     background-color: #ba0000;
     color: white;
 }
 
-.button3 {
-    background-color: white;
+.buttonu {
+    background-color: rgb(215, 215, 255);
     color: black;
     border: 2px solid #008CBA;
 }
   
-.button3:hover {
+.buttonu:hover {
     background-color: #008CBA;
     color: white;
 }
   
+.eye {
+    /* SOURCE: https://codepen.io/wentin/pen/mezPVw */
+    background-color: #4d4d4d;
+    width: 26px;
+    height: 26px;
+    border: solid 2px #000;
+    border-radius: 75% 15%;
+    position: relative;
+    transform: rotate(45deg);
+}
+.eye:before {
+    /* SOURCE: https://codepen.io/wentin/pen/mezPVw */
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid 2px #000;
+    border-radius: 50%;
+    left: 6px;
+    top: 6px;
+}
