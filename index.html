@@ -10,6 +10,10 @@
     </head>
     <body>
         <script src="scripts.js"></script>
+        <script src="app.js"></script>
+        <noscript>
+            Sorry, this application requires JavaScript to run. Here is <a href="https://www.enable-javascript.com/"> how to enable JavaScript</a>.
+        </noscript>
         <script>checkdarkpref()</script>
         <div class="maincont">
             <div id="destinytracker" class="destinytracker">
@@ -34,28 +38,31 @@
                 <h1 id="destinypointsheading" class="counterheading" style="display: none;">DESTINY POINTS</h1> 
             </div>
         </div>
+        <a href="#" onclick="togglehide('settings','block')"><div class="eye"></div></a>
+        <hr>
+        <div id="settings">
             <div>
-                <button class="button button1" onclick="add_destiny()">ADD DESTINY POINT</button>
+                <button class="button buttong" onclick="add_destiny()">+</button>
+                <button class="button buttonr" onclick="remove_destiny()">-</button>
                 <br>
-                <button class="button button2" onclick="remove_destiny()">REMOVE DESTINY POINT</button>
+                <button class="button buttonu" onclick="togglehide('destinynumber','inline-block')">TOGGLE NUMBER COUNTER</button>
                 <br>
-                <button class="button button3" onclick="togglehide('destinynumber','inline-block')">TOGGLE NUMBER COUNTER</button>
+                <button class="button buttonu" onclick="togglehide('destinytracker','inline-block')">TOGGLE USAGE TRACKER</button>
                 <br>
-                <button class="button button3" onclick="togglehide('destinytracker','inline-block')">TOGGLE USAGE TRACKER</button>
+                <button class="button buttonu" onclick="darkmodetoggle()">TOGGLE DARK MODE</button>
                 <br>
-                <button class="button button3" onclick="darkmodetoggle()">Toggle Dark/Light Mode</button>
+                <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
                 <br>
-                <button class="button button3" onclick="update_counter('reset')">RESET USED</button>
-                <br>
-                <button class="button button3" onclick="location.reload();">RESET PAGE</button>      
+                <button class="button buttonu" onclick="location.reload();">RESET PAGE</button>      
             </div>
             <br>
-        <hr>
-        For information, help, and guides, head to the Github repo here: <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker">github.com/Aerilym/SWRPG-Destiny-Point-Tracker</a>
-        <div style="font-size: smaller;">
-            <p>The token images are adapted from <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> (originaly made by <a href="https://rpgsessions.com/" target="_blank">Unbound Legends</a> and modified for use in this tool. This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
-            <p>Created by <a href="https://github.com/Aerilym" target="_blank">Ryan Miller</a>.</p>
-            <p>I am not associated with FFG Star Wars</p>
+            <hr>
+            For information, help, and guides, head to the Github repo here: <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker">github.com/Aerilym/SWRPG-Destiny-Point-Tracker</a>
+            <div style="font-size: smaller;">
+                <p>The token images are adapted from <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> (originaly made by <a href="https://rpgsessions.com/" target="_blank">Unbound Legends</a> and modified for use in this tool. This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
+                <p>Created by <a href="https://github.com/Aerilym" target="_blank">Ryan Miller</a>.</p>
+                <p>I am not associated with FFG Star Wars RPG</p>
+            </div>
         </div>
     </body>
 </html>
