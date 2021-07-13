@@ -43,29 +43,74 @@
         <div id="hidebutton" class=""><a href="#" onclick="togglehide('settings','block')"><div class="eye"></div></a></div>
         <div id="settings"> 
             <hr>
-            <div>
-                <button class="button buttong" onclick="add_destiny()">+</button>
-                <button class="button buttonr" onclick="remove_destiny()">-</button>
-                <button class="button buttonu" onclick="flip('light')">flip to light</button>
-                <button class="button buttonu" onclick="flip('dark')">flip to dark</button>
-                <br>
-                <button class="button buttonu" onclick="togglehide('destinynumber','inline-block')">TOGGLE NUMBER COUNTER</button>
-                <br>
-                <button class="button buttonu" onclick="togglehide('destinytracker','inline-block')">TOGGLE USAGE TRACKER</button>
-                <br>
-                <button class="button buttonu" onclick="darkmodetoggle()">TOGGLE DARK MODE</button>
-                <br>
-                <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
-                <br>
-                Move Eye:<br><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
-                <br>
-                <button class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
-                <br>
-                <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
-                <br>
-                <button class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">HIDE/UNHIDE EYE</button>
-                <br>
-                <button class="button buttonu" onclick="location.reload();">RESET PAGE</button>      
+            <div style="display: inline-flex;">
+                <div class="buttoncontainer">
+                    <h1>Buttons & Info</h1>
+                    <button class="button buttong" onclick="add_destiny()">+</button>
+                    <button class="button buttonr" onclick="remove_destiny()">-</button>
+                    <button class="button buttonu" onclick="flip('light')">flip to light</button>
+                    <button class="button buttonu" onclick="flip('dark')">flip to dark</button>
+                    <br>
+                    <button class="button buttonu" onclick="togglehide('destinynumber','inline-block')">TOGGLE NUMBER COUNTER</button>
+                    <br>
+                    <button class="button buttonu" onclick="togglehide('destinytracker','inline-block')">TOGGLE USAGE TRACKER</button>
+                    <br>
+                    <button class="button buttonu" onclick="darkmodetoggle()">TOGGLE DARK MODE</button>
+                    <br>
+                    <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
+                    <br>
+                    Move Eye:<br><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
+                    <br>
+                    <button class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
+                    <br>
+                    <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
+                    <br>
+                    <button class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">HIDE/UNHIDE EYE</button>
+                    <br>
+                    <button class="button buttonu" onclick="location.reload();">RESET PAGE</button>      
+                </div>
+                <div class="keybindcontainer">
+                    <h1>Keybinds</h1>
+                    <table class="keybindtable">
+                        <tr>
+                            <th>Action</th>
+                            <th>Keybind 1</th>
+                            <th>Keybind 2</th>
+                          </tr>
+                          <tr>
+                            <td>Add Destiny Point: </td>
+                            <td><kbd>shift + +</kbd></td>
+                            <td><kbd>shift + =</kbd></td>
+                          </tr>
+                          <tr>
+                            <td>Remove Destiny Point:</td>
+                            <td><kbd>shift + -</kbd></td>
+                            <td><kbd>shift + _</kbd></td>
+                          </tr>
+                          <tr>
+                            <td>Flip Point to Light</td>
+                            <td><kbd>shift + up</kbd></td>
+                            <td><kbd></kbd></td>
+                          </tr>
+                          <tr>
+                            <td>Flip Point to Dark</td>
+                            <td><kbd>shift + down</kbd></td>
+                            <td><kbd></kbd></td>
+                          </tr>
+                          <tr>
+                            <td>Hide/Unhide Buttons & Info</td>
+                            <td><kbd>shift + h</kbd></td>
+                            <td><kbd></kbd></td>
+                          </tr>
+                          <tr>
+                            <td>Hide/Unhide Eye Button</td>
+                            <td><kbd>shift + e</kbd></td>
+                            <td><kbd></kbd></td>
+                          </tr>
+                        </table>
+                    </table>
+                </div>
+
             </div>
             <br>
             <hr>

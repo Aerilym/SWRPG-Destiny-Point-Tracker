@@ -167,3 +167,20 @@ body.darkmode{
     background-color: rgb(209, 209, 209);
     border: 2px solid #4d4d44
 }
+
+.buttoncontainer{
+    margin: 6px;
+    display: inline-block;
+}
+
+.keybindcontainer{
+    margin: 6px;
+    display: inline-block;
+}
+
+.keybindtable{
+}
+
+.keybindtable td{
+    padding: 6px 12px;
+}
