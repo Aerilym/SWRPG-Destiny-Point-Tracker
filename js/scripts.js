@@ -161,3 +161,8 @@ function locktooltip(elementID, endcondition=true) {
         tooltip.onmouseover = function(){tooltiptext.classList.remove('locktooltipon')};
     }
 }
+
+function firsttime() {
+    addtooltip('adddestiny','Click here to begin by adding your first destiny point!')
+    locktooltip('adddestiny')
+}
