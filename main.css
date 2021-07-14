@@ -196,3 +196,8 @@ body.darkmode{
 .marginsplit2{
     margin-top: 335px;
 }
+
+.buttonblock{
+    float: left;
+    margin: 10px;
+}
