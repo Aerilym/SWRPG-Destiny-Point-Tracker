@@ -29,13 +29,13 @@ function getCookie(name) {
 } 
 
 function darkmodetoggle() {
+    document.body.classList.toggle("darkmode");
     var myCookie = getCookie("darkmodepref");
     if (myCookie.includes('False')){
       document.cookie = "darkmodepref=True; expires=Thu, 18 Dec 2030 12:00:00 UTC";
     } else if (myCookie.includes('True')){
       document.cookie = "darkmodepref=False; expires=Thu, 18 Dec 2030 12:00:00 UTC";
     }
-    document.body.classList.toggle("darkmode");
     }
 
 function checkdarkpref(){
