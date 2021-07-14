@@ -128,3 +128,36 @@ function altkeybinds() {
     }
     
 }
+
+function addtooltip(elementID,text='placeholder',location='top') {
+    if (location == 'bottom'){
+        classsuffix = 'bottom'
+    } else if (location == 'left'){
+        classsuffix = 'left'
+    } else if (location == 'right'){
+        classsuffix = 'right'
+    } else {
+        classsuffix = 'top'
+    }
+    var element = document.getElementById(elementID)
+    var tooltip = document.createElement('div')
+    tooltip.classList.add('tooltip')
+    tooltip.classList.add('tooltip'+classsuffix)
+    var tooltiptext = document.createElement('span')
+    tooltiptext.classList.add('tooltiptext')
+    tooltiptext.classList.add('tooltiptext'+classsuffix)
+    tooltiptext.innerText = text
+    tooltip.appendChild(tooltiptext)
+    element.parentNode.insertBefore(tooltip,element)
+    tooltip.appendChild(element)
+}
+
+function locktooltip(elementID, endcondition=true) {
+    var element = document.getElementById(elementID)
+    var tooltip = element.parentNode
+    tooltiptext = tooltip.children[0]
+    tooltiptext.classList.add('locktooltipon')
+    if (endcondition == true){
+        tooltip.onmouseover = function(){tooltiptext.classList.remove('locktooltipon')};
+    }
+}
