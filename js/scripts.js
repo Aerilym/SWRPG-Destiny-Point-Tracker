@@ -1,3 +1,6 @@
+let version = '1.0.1';
+
+
 function togglehide(item, basedisplay) {
     var x = document.getElementById(item);
     if (x.style.display === "none") {
@@ -173,6 +176,38 @@ function locktooltip(elementID, endcondition='onmouseover') {
     } else if (endcondition == 'onclick'){
         tooltip.onclick = function(){tooltiptext.classList.remove('locktooltipon')};
     }
+}
+
+
+function userstate() {
+    var vercookie = getCookie("userversion");
+    if (vercookie == null){
+        firsttime()
+    } else {
+        var userversion = vercookie
+        if (isoldversion(userversion)){
+            console.log(newfeatures(userversion))
+        }
+    }
+    document.cookie = "userversion=" + version +"; expires=Thu, 18 Dec 2030 12:00:00 UTC";
+}
+
+function isoldversion(userversion) {
+    var uv = userversion.split('.')
+    var sv = version.split('.')
+    if (uv[0]<sv[0]){
+        return true
+    } else if (uv[1]<sv[1]){
+        return true
+    } else if (uv[2]<sv[2]){
+        return true
+    } else {
+        return false
+    }
+}
+
+function newfeatures(userversion) {
+    return 'will find new features and inform user'
 }
 
 function firsttime() {
