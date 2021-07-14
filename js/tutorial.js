@@ -16,9 +16,16 @@ function tutorialendbutton() {
 function endtutorial() {
     var currenttip = document.getElementsByClassName('tutorialtip')[0]
     removetooltip(currenttip.lastChild.id)
+    resettutorialbutton()
+}
+
+function resettutorialbutton() {
+    var tutorialbutton = document.getElementById('tutorialbutton')
     tutorialbutton.innerText = 'BEGIN TUTORIAL'
     tutorialbutton.classList.remove('buttonr')
     tutorialbutton.classList.add('buttonu')
+    tutorialbutton.onclick = function(){tutorial();tutorialendbutton();}
+
 }
 
 function tutorial() {
@@ -39,11 +46,11 @@ function tutorial() {
                                                             tutorialtooltip('moveusedrightbutton','You can also move elements around, try clicking here to move the "used" counter to the right. This can be done for all elements.','right',function(){
                                                                 tutorialtooltip('hidebutton','You can click this eye button to hide all of the buttons and information, showing only the app. Click it.','right',function(){
                                                                     tutorialtooltip('hidebutton','Now click it again to unhide it all.','right',function(){
-                                                                        tutorialtooltip('eyetopleft','You can also move the eye button if you want it out of the way. Click the button and see.','left',function(){
+                                                                        tutorialtooltip('eyetopleft','You can also move the eye button if you want it out of the way. Click the button and see.','right',function(){
                                                                             tutorialtooltip('eyeresetbutton','Reset the eye position','right',function(){
                                                                                 tutorialtooltip('hideeyebutton','You can also hide the eye completely, but doing so means you have to use the keybinds to hide the buttons and menus unless you unhide the eye.','right',function(){
                                                                                     tutorialtooltip('keybindhead','The app also works completley with keybinds, try some of them out. You can also click the "Enable non-shift keybinds" button to remove the need to press the shift button. Try hiding the menu and the eye button. Click here to end the tutorial.','left',function(){
-                                                                                        done()
+                                                                                        resettutorialbutton()
                                                                                     }
                                                                                     )
                                                                                 }
@@ -86,9 +93,6 @@ function tutorial() {
         )
     }
     )
-    tutorialbutton.innerText = 'BEGIN TUTORIAL'
-    tutorialbutton.classList.remove('buttonr')
-    tutorialbutton.classList.add('buttonu')
 }
 
 function done() {
