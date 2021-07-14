@@ -34,3 +34,29 @@ Mousetrap.bind('shift+down', function(e) {
 Mousetrap.bind('up up down down left right left right b a enter', function() {
     alert('nice')
 });
+
+function bindnonshift() {
+    Mousetrap.bind('h', function(e) {
+        togglehide('settings','block')
+        return false;
+    });
+    Mousetrap.bind('e', function(e) {
+        deleteeye('key')
+        return false;
+    });
+    Mousetrap.bind('up', function(e) {
+        flip('light')
+        return false;
+    });
+    Mousetrap.bind('down', function(e) {
+        flip('dark')
+        return false;
+    });
+}
+
+function unbindnonshift() {
+    Mousetrap.unbind('h');
+    Mousetrap.unbind('e');
+    Mousetrap.unbind('up');
+    Mousetrap.unbind('down');
+}

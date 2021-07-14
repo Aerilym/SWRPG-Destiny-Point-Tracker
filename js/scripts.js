@@ -95,3 +95,22 @@ function rightalign() {
         marginsplit.classList.add('marginsplit2')
     }
 }
+
+function altkeybinds() {
+    var altscript = document.getElementById('altscript')
+    var altscriptunbind = document.getElementById('altscriptunbind')
+    if (altscriptunbind){
+        altscriptunbind.remove()
+        var altscript = document.createElement("div");
+        altscript.id = 'altscript'
+        document.body.append(altscript)
+        bindnonshift()
+    } else {
+        altscript.remove()
+        var altscriptunbind = document.createElement("div");
+        altscriptunbind.id = 'altscriptunbind'
+        document.body.append(altscriptunbind)
+        unbindnonshift()
+    }
+    
+}
