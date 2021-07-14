@@ -61,6 +61,45 @@
     border-color: transparent transparent #4d4d4d transparent;
   }
 
+
+  .tooltip .tooltiptextright {
+    top: -5px;
+    left: 105%;
+  }
+
+  .tooltip .tooltiptextright::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #4d4d4d transparent transparent;
+  }
+
+  .tooltip .tooltiptextleft {
+    top: -5px;
+    right: 105%;
+  }
+
+  .tooltip .tooltiptextleft::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #4d4d4d;
+  }
+
+
   .locktooltipon{
     visibility: visible !important;
   }
+
+  .tooltiptextwide{
+    width: 240px !important;
+  }
+  

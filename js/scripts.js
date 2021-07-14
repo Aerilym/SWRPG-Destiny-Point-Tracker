@@ -146,23 +146,36 @@ function addtooltip(elementID,text='placeholder',location='top') {
     var tooltiptext = document.createElement('span')
     tooltiptext.classList.add('tooltiptext')
     tooltiptext.classList.add('tooltiptext'+classsuffix)
+    if (text.length>64){
+        tooltiptext.classList.add('tooltiptextwide')
+    }
     tooltiptext.innerText = text
     tooltip.appendChild(tooltiptext)
     element.parentNode.insertBefore(tooltip,element)
     tooltip.appendChild(element)
 }
 
-function locktooltip(elementID, endcondition=true) {
+function removetooltip(elementID) {
+    var element = document.getElementById(elementID)
+    var tooltip = element.parentNode
+    tooltip.parentNode.insertBefore(element,tooltip)
+    tooltip.remove()
+}
+
+
+function locktooltip(elementID, endcondition='onmouseover') {
     var element = document.getElementById(elementID)
     var tooltip = element.parentNode
     tooltiptext = tooltip.children[0]
     tooltiptext.classList.add('locktooltipon')
-    if (endcondition == true){
+    if (endcondition == 'onmouseover'){
         tooltip.onmouseover = function(){tooltiptext.classList.remove('locktooltipon')};
+    } else if (endcondition == 'onclick'){
+        tooltip.onclick = function(){tooltiptext.classList.remove('locktooltipon')};
     }
 }
 
 function firsttime() {
     addtooltip('adddestiny','Click here to begin by adding your first destiny point!')
-    locktooltip('adddestiny')
+    locktooltip('adddestiny','onclick')
 }
