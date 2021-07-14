@@ -1,11 +1,22 @@
-function update_counter(counter){
+function update_counter(counter, action){
     var darkcounter = document.getElementById('darkcounter')
     var lightcounter = document.getElementById('lightcounter')
+    if (action == '+'){
+        change = 1
+    } else if (action == '-'){
+        if (lightcounter.innerText == 0 && counter == 'light'){
+            change = 0
+        } else if (darkcounter.innerText == 0 && counter == 'dark'){
+            change = 0
+        } else {
+            change = -1
+        }
+    }
     if (counter == 'light'){
-        count = parseInt(lightcounter.innerText) + 1
+        count = parseInt(lightcounter.innerText) + change
         lightcounter.innerText = count
     } else if (counter == 'dark'){
-        count = parseInt(darkcounter.innerText) + 1
+        count = parseInt(darkcounter.innerText) + change
         darkcounter.innerText = count
     } else if (counter == 'reset'){
         darkcounter.innerText = 0
@@ -36,12 +47,12 @@ function change_destiny(destinyID){
     console.log(imgname)
     if (imgname == 'dark0.svg'){
         destinypoint.src = 'images/light.svg'
-        update_counter('dark')
+        update_counter('dark', '+')
         update_number('dark', '-')
         update_number('light', '+')
     } else if (imgname == 'light.svg') {
         destinypoint.src = 'images/dark0.svg'
-        update_counter('light')
+        update_counter('light', '+')
         update_number('dark', '+')
         update_number('light', '-')
     }
