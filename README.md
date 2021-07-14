@@ -3,7 +3,7 @@
 ## Links and Information
 
 * [Use Online](https://aerilym.github.io/SWRPG-Destiny-Point-Tracker) - Access the full functionality of the app, use it online.
-* [Download](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker) - If you download the tool you can run it locally in a web browser or in a studio program like [OBS](https://obsproject.com/).
+* [Download](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases) - If you download the tool you can run it locally in a web browser or in a studio program like [OBS](https://obsproject.com/).
 * [OBS Guide](#OBSGUIDE) - You can use this tool as a browser scene on [OBS](https://obsproject.com/) or similar, for use as a webcam overlay or live asset.
 * [Local Guide](#Local-Guide) - You can use the tool locally in your web browser.
 * [Modification Guide](#Modification-Guide) - Some aspects can be modified with no knowledge of programming.
@@ -11,9 +11,11 @@
 
 ## Help & Guides
 
+Press the tutorial button on the page for an in-depth walkthrough of how to use the tool.
+
 ### Local Guide
 
-1. Download the app at [https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker).
+1. Download the app at [https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases).
 2. If the download is in a zip file make sure you unzip it before use.
 3. Open the index.html file in a web browser or compatible program.
 NOTE: The dark/light mode toggle feature will not work locally but it will take your operating system preference and use that.
