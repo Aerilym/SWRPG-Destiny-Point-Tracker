@@ -179,6 +179,7 @@ body.darkmode{
 
 .keybindtable td{
     padding: 6px 12px;
+    text-align: center;
 }
 
 .symbolcontrol{

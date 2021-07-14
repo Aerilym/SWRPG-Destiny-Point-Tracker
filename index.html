@@ -99,49 +99,61 @@
                         <br>
                         <button class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
                         <br>
-                        <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
+                        <button id="hideeyebutton" class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">Hide eye button</button>   
                         <br>
-                        <button class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">HIDE/UNHIDE EYE</button>    
+                        <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
                     </div>
                 </div>
                 <div class="keybindcontainer">
                     <h1>Keybinds</h1>
-                    <button class="button buttonu" onclick="altkeybinds()">Toggle non-shift keybinds</button>
                     <table class="keybindtable">
                         <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th><button id="altkeybindbutton" class="button buttong" onclick="altkeybinds()">Enable non-shift keybinds</button></th>
+                          </tr>
+                          <tr>
                             <th>Action</th>
                             <th>Keybind 1</th>
                             <th>Keybind 2</th>
+                            <th>Non-shift Keybinds</th>
                           </tr>
                           <tr>
                             <td>Add Destiny Point: </td>
-                            <td><kbd>shift + +</kbd></td>
-                            <td><kbd>shift + =</kbd></td>
+                            <td><kbd>+</kbd></td>
+                            <td><kbd>=</kbd></td>
+                            <td><kbd></kbd></td>
                           </tr>
                           <tr>
                             <td>Remove Destiny Point:</td>
-                            <td><kbd>shift + -</kbd></td>
-                            <td><kbd>shift + _</kbd></td>
+                            <td><kbd>-</kbd></td>
+                            <td><kbd>_</kbd></td>
+                            <td><kbd></kbd></td>
                           </tr>
                           <tr>
                             <td>Flip Point to Light</td>
                             <td><kbd>shift + up</kbd></td>
                             <td><kbd></kbd></td>
+                            <td><kbd>up</kbd></td>
                           </tr>
                           <tr>
                             <td>Flip Point to Dark</td>
                             <td><kbd>shift + down</kbd></td>
                             <td><kbd></kbd></td>
+                            <td><kbd>down</kbd></td>
                           </tr>
                           <tr>
                             <td>Hide/Unhide Buttons & Info</td>
                             <td><kbd>shift + h</kbd></td>
                             <td><kbd></kbd></td>
+                            <td><kbd>h</kbd></td>
                           </tr>
                           <tr>
                             <td>Hide/Unhide Eye Button</td>
                             <td><kbd>shift + e</kbd></td>
                             <td><kbd></kbd></td>
+                            <td><kbd>e</kbd></td>
                           </tr>
                         </table>
                     </table>

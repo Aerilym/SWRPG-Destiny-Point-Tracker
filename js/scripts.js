@@ -69,8 +69,15 @@ function eyemover(position){
 }
 
 function deleteeye(source){
+    var hideeyebutton = document.getElementById('hideeyebutton')
     if (source != 'key'){
-        var answer = window.confirm("Are you sure? This will hide the eye button. You will only be able to use the hotkey to hide and unhide the buttons and information (SHIFT+H)");
+        if (document.getElementById('hidebutton').style.display == 'none'){
+            hideeyebutton.innerText = 'Hide Eye Button'
+            var answer = true
+        } else {
+            hideeyebutton.innerText = 'Show Eye Button'
+            var answer = window.confirm("Are you sure? This will hide the eye button. You will only be able to use the hotkey to hide and unhide the buttons and information (SHIFT+H)");
+        }
         if (answer) {
             togglehide('hidebutton','block')
             eyemover('')
@@ -99,18 +106,25 @@ function rightalign() {
 function altkeybinds() {
     var altscript = document.getElementById('altscript')
     var altscriptunbind = document.getElementById('altscriptunbind')
+    var altkeybindbutton = document.getElementById('altkeybindbutton')
     if (altscriptunbind){
         altscriptunbind.remove()
         var altscript = document.createElement("div");
         altscript.id = 'altscript'
         document.body.append(altscript)
         bindnonshift()
+        altkeybindbutton.classList.remove('buttong')
+        altkeybindbutton.classList.add('buttonr')
+        altkeybindbutton.innerText = 'Disable non-shift keybinds'
     } else {
         altscript.remove()
         var altscriptunbind = document.createElement("div");
         altscriptunbind.id = 'altscriptunbind'
         document.body.append(altscriptunbind)
         unbindnonshift()
+        altkeybindbutton.classList.remove('buttonr')
+        altkeybindbutton.classList.add('buttong')
+        altkeybindbutton.innerText = 'Enable non-shift keybinds'
     }
     
 }
