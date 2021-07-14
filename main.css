@@ -8,6 +8,22 @@ body.darkmode{
     color: #eee;
 }
 
+a:link, a:visited {
+    color: #002938;
+    text-decoration: none;
+  }
+  
+  a:link:active, a:visited:active {
+    color: #00445a;
+  }
+body.darkmode  a:link, a:visited {
+    color: #01a6dd;
+  }
+  
+body.darkmode a:link:active, a:visited:active {
+    color: #00b1ec;
+  }
+
 .destinysvg{
     width: 172px;
     margin: 1px;
