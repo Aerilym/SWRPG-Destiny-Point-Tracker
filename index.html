@@ -11,6 +11,7 @@
         <meta property="og:description" content="A tool for tracking destiny points in your SWRPG game.">
         <meta property="og:image" content="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/images/ogimage.png">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="tooltips.css"
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBKTVX6696"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -60,48 +61,49 @@
                 <div class="buttoncontainer">
                     <div class="buttonblock">
                         <h2>Destiny Controls</h2>
-                        <button class="button buttong symbolcontrol" onclick="add_destiny()">+</button>
-                        <button class="button buttonu" onclick="flip('light')">flip to light</button>
+                        <button id="adddestiny" class="button buttong symbolcontrol" onclick="add_destiny()">+</button>
+                        <button id="fliplight" class="button buttonu" onclick="flip('light')">flip to light</button>
                     <br>
-                        <button class="button buttonr symbolcontrol" onclick="remove_destiny()">-</button>
-                        <button class="button buttonu" onclick="flip('dark')">flip to dark</button>
+                        <button id="rempvedestiny" class="button buttonr symbolcontrol" onclick="remove_destiny()">-</button>
+                        <button id="flipdark" class="button buttonu" onclick="flip('dark')">flip to dark</button>
                     </div>
                     <div class="buttonblock">
                         <h2>Toggle Features</h2>
-                        <button class="button buttonu" onclick="togglehide('destinynumber','inline-block')">NUMBER COUNTER</button>
+                        <button id="numbertoggle" class="button buttonu" onclick="togglehide('destinynumber','inline-block')">NUMBER COUNTER</button>
                         <br>
-                        <button class="button buttonu" onclick="togglehide('destinytracker','inline-block')">USAGE TRACKER</button>
+                        <button id="usagetrackertoggle" class="button buttonu" onclick="togglehide('destinytracker','inline-block')">USAGE TRACKER</button>
                         <br>
-                        <button class="button buttonu" onclick="darkmodetoggle()">DARK MODE</button>
+                        <button id="darktoggle" class="button buttonu" onclick="darkmodetoggle()">DARK MODE</button>
                     </div>
                     <div class="buttonblock">
                         <h2>Used Counter Controls</h2>
-                        <button class="button buttong usedcountercontrol" onclick="update_counter('light','+')">+ Light</button>
-                        <button class="button buttong usedcountercontrol" onclick="update_counter('dark','+')">+ Dark</button>
+                        <button id="counteraddlight" class="button buttong usedcountercontrol" onclick="update_counter('light','+')">+ Light</button>
+                        <button id="counteradddark" class="button buttong usedcountercontrol" onclick="update_counter('dark','+')">+ Dark</button>
                         <br>
-                        <button class="button buttonr usedcountercontrol" onclick="update_counter('light','-')">- Light</button>
-                        <button class="button buttonr usedcountercontrol" onclick="update_counter('dark','-')">- Dark</button>
+                        <button id="counterremovelight" class="button buttonr usedcountercontrol" onclick="update_counter('light','-')">- Light</button>
+                        <button id="counterremovedark" class="button buttonr usedcountercontrol" onclick="update_counter('dark','-')">- Dark</button>
                         <br>
-                        <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
+                        <button id="counterreset" class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
                     </div>
                     <div class="buttonblock">
                         <h2>Move Elements</h2>
-                        <button class="button buttonu" onclick="rightalign()">Align Right</button>
+                        <button id="alignrightbutton" class="button buttonu" onclick="rightalign()">Align Right</button>
                         <br>
-                        <button class="button buttonu" onclick="flippos('destinytracker')">MOVE USED TO RIGHT</button>
+                        <button id="moveusedrightbutton" class="button buttonu" onclick="flippos('destinytracker')">MOVE USED TO RIGHT</button>
                         <br>
-                        <button class="button buttonu" onclick="flippos('destinynumber')">MOVE NUM TO RIGHT</button>
+                        <button id="movenumrightbutton" class="button buttonu" onclick="flippos('destinynumber')">MOVE NUM TO RIGHT</button>
                         <br>
-                        <button class="button buttonu" onclick="flippos('destinytray')">MOVE TOKENS TO RIGHT</button>
+                        <button id="movetokensrightbutton" class="button buttonu" onclick="flippos('destinytray')">MOVE TOKENS TO RIGHT</button>
                     </div>
                     <div class="buttonblock">
-                        <h2>Eye Button Movement</h2><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
+                        <h2>Eye Button Movement</h2>
+                        <button id="eyetopleft" class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button id="eyetopright" class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
                         <br>
-                        <button class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
+                        <button id="eyebottomleft" class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
                         <br>
                         <button id="hideeyebutton" class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">Hide eye button</button>   
                         <br>
-                        <button class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
+                        <button id="eyeresetbutton" class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
                     </div>
                 </div>
                 <div class="keybindcontainer">
