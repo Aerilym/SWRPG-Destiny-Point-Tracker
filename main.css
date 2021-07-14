@@ -67,7 +67,6 @@ body.darkmode{
 .maincont{
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
 }
 
 .button {
@@ -185,4 +184,11 @@ body.darkmode{
 .symbolcontrol{
     font-size: larger;
     width: 60px;
+}
+
+.marginsplit{
+    margin-top: 100px;
+}
+.marginsplit2{
+    margin-top: 335px;
 }

@@ -83,3 +83,15 @@ function deleteeye(source){
         eyemover('')
     }
 }
+
+function rightalign() {
+    var maincontent = document.getElementById('maincontent')
+    var marginsplit = document.getElementById('marginsplit')
+    if (maincontent.classList.contains('topright')){
+        maincontent.classList.remove('topright');
+        marginsplit.classList.remove('marginsplit2')
+    } else {
+        maincontent.classList.add('topright');
+        marginsplit.classList.add('marginsplit2')
+    }
+}

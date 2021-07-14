@@ -119,3 +119,9 @@ function flip(goal) {
           }
     }
 }
+
+function flippos(elementID) {
+    var maincontent = document.getElementById('maincontent')
+    var element = document.getElementById(elementID)
+    maincontent.appendChild(element)
+}

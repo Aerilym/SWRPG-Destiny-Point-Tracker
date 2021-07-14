@@ -25,7 +25,7 @@
             Sorry, this application requires JavaScript to run. Here is <a href="https://www.enable-javascript.com/"> how to enable JavaScript</a>.
         </noscript>
         <script>checkdarkpref()</script>
-        <div class="maincont">
+        <div class="maincont" id="maincontent">
             <div id="destinytracker" class="destinytracker">
                 <h1 class="counterheading">USED</h1>
                 <div class="counterimg" style="background-image: url(images/light.svg);">
@@ -48,6 +48,7 @@
                 <h1 id="destinypointsheading" class="counterheading" style="display: none;">DESTINY POINTS</h1> 
             </div>
         </div>
+        <div id="marginsplit" class="marginsplit"></div>
         <div id="hidebutton" class=""><a href="#" onclick="togglehide('settings','block')"><div class="eye"></div></a></div>
         <div id="settings"> 
             <hr>
@@ -68,6 +69,12 @@
                     <button class="button buttonu" onclick="darkmodetoggle()">TOGGLE DARK MODE</button>
                     <br>
                     <button class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
+                    <br>
+                    <button class="button buttonu" onclick="rightalign()">Align Right</button>
+                    <br>
+                    <button class="button buttonu" onclick="flippos('destinytracker')">MOVE USED TO RIGHT</button>
+                    <button class="button buttonu" onclick="flippos('destinynumber')">MOVE NUM TO RIGHT</button>
+                    <button class="button buttonu" onclick="flippos('destinytray')">MOVE TOKENS TO RIGHT</button>
                     <br>
                     <h2>Eye Button Movement</h2><button class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
                     <br>
@@ -126,9 +133,9 @@
             For information, help, and guides, head to the Github repo here: <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker" target="_blank">github.com/Aerilym/SWRPG-Destiny-Point-Tracker</a>
             <div style="font-size: smaller;">
                 <p>The token images are adapted from <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> (originaly made by <a href="https://rpgsessions.com/" target="_blank">Unbound Legends</a> and modified for use in this tool. This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
-                <p>Created by <a href="https://github.com/Aerilym" target="_blank">Ryan Miller</a>. I also do a SWRPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
+                <p>Created by <a href="https://aerilym.github.io/" target="_blank">Ryan Miller</a>. I also do a SWRPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
                 <p>I am not associated with FFG Star Wars RPG</p>
-                <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#7a27c2', 'Y8Y85AWOK');kofiwidget2.draw();</script>
+                <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#7a27c2', 'Y8Y85AWOK');kofiwidget2.draw();</script>
             </div>
         </div>
     </body>
