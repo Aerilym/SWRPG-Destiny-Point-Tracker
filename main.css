@@ -218,3 +218,8 @@ body.darkmode a:link:active, a:visited:active {
     float: left;
     margin: 10px;
 }
+
+.buttonblock h2{
+    margin-top: 10px;
+    margin-bottom: 4px;
+}

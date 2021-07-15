@@ -211,6 +211,12 @@ function newfeatures(userversion) {
 }
 
 function firsttime() {
-    addtooltip('adddestiny','Click here to begin by adding your first destiny point!')
-    locktooltip('adddestiny','onclick')
+    tutorialtooltip('adddestiny','Click here to begin by adding your first destiny point!','right',function(){
+        addtooltip('tutorialbutton','You can click here to begin a short walkthrough tutorial if you want to learn about the tool and how to use it. Otherwise, have fun!','bottom')
+        locktooltip('tutorialbutton','onmouseover')
+        var element = document.getElementById('tutorialbutton')
+        var tooltip = element.parentNode
+        tooltip.onclick = function(){removetooltip('tutorialbutton')};
+    }
+    )
 }
