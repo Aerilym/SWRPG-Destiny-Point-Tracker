@@ -198,6 +198,12 @@ body.darkmode a:link:active, a:visited:active {
     text-align: center;
 }
 
+.keybindtable th{
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+}
+
 .symbolcontrol{
     font-size: larger;
     width: 60px;
@@ -222,4 +228,17 @@ body.darkmode a:link:active, a:visited:active {
 .buttonblock h2{
     margin-top: 10px;
     margin-bottom: 4px;
+}
+
+.buttonblock h3{
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+.buttonf{
+    width: 140px;
+}
+
+.buttonmove{
+    width: 170px;
 }

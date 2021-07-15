@@ -75,28 +75,28 @@
                             <button id="counterremovelight" class="button buttonr usedcountercontrol" onclick="update_counter('light','-')">- Light</button>
                             <button id="counterremovedark" class="button buttonr usedcountercontrol" onclick="update_counter('dark','-')">- Dark</button>
                             <br>
-                            <button id="counterreset" class="button buttonu" onclick="update_counter('reset')">RESET USED COUNTER</button>
+                            <button id="counterreset" class="button buttonu" onclick="update_counter('reset')">Reset USED Counter</button>
                         </div>
                     </div>
                     <div class="buttonblock">
                         <h2>Toggle Features</h2>
-                        <button id="numbertoggle" class="button buttonu" onclick="togglehide('destinynumber','inline-block')">NUMBER COUNTER</button>
+                        <button id="numbertoggle" class="button buttonu buttonf" onclick="togglehide('destinynumber','inline-block')">NUM Counter</button>
                         <br>
-                        <button id="usagetrackertoggle" class="button buttonu" onclick="togglehide('destinytracker','inline-block')">USAGE TRACKER</button>
+                        <button id="usagetrackertoggle" class="button buttonu buttonf" onclick="togglehide('destinytracker','inline-block')">USED Counter</button>
                         <br>
-                        <button id="darktoggle" class="button buttonu" onclick="darkmodetoggle()">DARK MODE</button>
+                        <button id="darktoggle" class="button buttonu buttonf" onclick="darkmodetoggle()">Dark Mode</button>
                         <br>
-                        <button id="alignrightbutton" class="button buttonu" onclick="rightalign()">Align Right</button>
+                        <button id="alignrightbutton" class="button buttonu buttonf" onclick="rightalign()">Align Right</button>
                         <br>
-                        <button id="tutorialbutton" class="button buttonu" onclick="tutorial();tutorialendbutton();">BEGIN TUTORIAL</button>
+                        <button id="tutorialbutton" class="button buttonu buttonf" onclick="tutorial();tutorialendbutton();">Begin Tutorial</button>
                     </div>
                     <div class="buttonblock">
                         <h2>Move Elements</h2>
-                        <button id="moveusedrightbutton" class="button buttonu" onclick="flippos('destinytracker')">MOVE USED TO RIGHT</button>
+                        <button id="moveusedrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytracker')">Move USED Right</button>
                         <br>
-                        <button id="movenumrightbutton" class="button buttonu" onclick="flippos('destinynumber')">MOVE NUM TO RIGHT</button>
+                        <button id="movenumrightbutton" class="button buttonu buttonmove" onclick="flippos('destinynumber')">Move NUM Right</button>
                         <br>
-                        <button id="movetokensrightbutton" class="button buttonu" onclick="flippos('destinytray')">MOVE TOKENS TO RIGHT</button>
+                        <button id="movetokensrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytray')">Move Tokens Right</button>
                         <div>
                             <h3>Eye Button Movement</h3>
                             <button id="eyetopleft" class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button id="eyetopright" class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
@@ -114,9 +114,9 @@
                     <table class="keybindtable">
                           <tr>
                             <th>Action</th>
-                            <th>Keybind 1</th>
-                            <th>Keybind 2</th>
-                            <th>Non-shift Keybinds</th>
+                            <th> Keybind 1 </th>
+                            <th> Keybind 2 </th>
+                            <th> Non-shift </th>
                           </tr>
                           <tr>
                             <td>Add Destiny Point: </td>
@@ -143,7 +143,7 @@
                             <td><kbd>down</kbd></td>
                           </tr>
                           <tr>
-                            <td>Hide/Unhide Buttons & Info</td>
+                            <td>Hide/Unhide Settings</td>
                             <td><kbd>shift + h</kbd></td>
                             <td><kbd></kbd></td>
                             <td><kbd>h</kbd></td>
@@ -156,7 +156,7 @@
                           </tr>
                         </table>
                     </table>
-                    NOTE: If a keybind isn't working, try using <kbd>ctrl</kbd> in place of <kbd>shift</kbd>. Eg. Instead of <kbd>shift + up</kbd> try <kbd>ctrl + up</kbd>
+                    <p>NOTE: If a keybind isn't working, try using <kbd>ctrl</kbd> in place of <kbd>shift</kbd>. Eg. Instead of <kbd>shift + up</kbd> try <kbd>ctrl + up</kbd></p>
                 </div>
 
             </div>

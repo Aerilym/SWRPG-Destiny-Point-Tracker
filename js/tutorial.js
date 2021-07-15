@@ -7,7 +7,7 @@ function tutorialtooltip(elementID,message,location,next=function(){done()}) {
 
 function tutorialendbutton() {
     var tutorialbutton = document.getElementById('tutorialbutton')
-    tutorialbutton.innerText = 'END TUTORIAL'
+    tutorialbutton.innerText = 'End Tutorial'
     tutorialbutton.classList.remove('buttonu')
     tutorialbutton.classList.add('buttonr')
     tutorialbutton.onclick = function(){endtutorial()}
@@ -21,7 +21,7 @@ function endtutorial() {
 
 function resettutorialbutton() {
     var tutorialbutton = document.getElementById('tutorialbutton')
-    tutorialbutton.innerText = 'BEGIN TUTORIAL'
+    tutorialbutton.innerText = 'Begin Tutorial'
     tutorialbutton.classList.remove('buttonr')
     tutorialbutton.classList.add('buttonu')
     tutorialbutton.onclick = function(){tutorial();tutorialendbutton();}
