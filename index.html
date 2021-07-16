@@ -76,7 +76,7 @@
                             <button id="counterremovelight" class="button buttonr usedcountercontrol" onclick="update_counter('light','-')">- Light</button>
                             <button id="counterremovedark" class="button buttonr usedcountercontrol" onclick="update_counter('dark','-')">- Dark</button>
                             <br>
-                            <button id="counterreset" class="button buttonu" onclick="update_counter('reset')">Reset USED Counter</button>
+                            <button id="counterreset" class="button buttonu" style="width: 97%;" onclick="update_counter('reset')">Reset USED Counter</button>
                         </div>
                     </div>
                     <div class="buttonblock">
@@ -89,7 +89,7 @@
                         <br>
                         <button id="alignrightbutton" class="button buttonu buttonf" onclick="rightalign()">Align Right</button>
                         <br>
-                        <button id="tutorialbutton" class="button buttonu buttonf" onclick="tutorial();tutorialendbutton();">Begin Tutorial</button>
+                        <button id="tutorialbutton" class="button buttonu buttonf" onclick="cleantooltips();tutorial();tutorialendbutton();">Begin Tutorial</button>
                     </div>
                     <div class="buttonblock">
                         <h2>Move Elements</h2>
@@ -165,7 +165,7 @@
             <hr>
             <div style="font-size: smaller;">
                 <button id="information" class="button buttonu">Information</button>
-                
+                <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases" target="_blank"><button id="download" class="button buttonu">Download</button></a>
                 <p>Created by <a href="https://aerilym.github.io/" target="_blank">Ryan Miller</a>. I also do a SWRPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
                 <p>I am not associated with FFG Star Wars RPG</p>
             </div>
@@ -185,6 +185,8 @@
         <p>The token images are adapted from assets originally made by <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> and modified for use in this tool.</p>
         <p>Keybinds are handled by a small JavaScript library called <a href="https://craig.is/killing/mice" target="_blank">Mousetrap.js</a>.</p>
         <p>The total size of the tool is approximately 20KB.</p>
+        <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/#Frequently-Asked-Questions" target="_blank"><button id="download" class="button buttonu">Frequently Asked Questions</button></a>
+        
       </div>
       <div class="modal-footer">
         <a title="Support me on ko-fi.com" class="kofi-button" style="background-color:#7a27c2;" href="https://linktr.ee/Aerilym" target="_blank"> <span class="kofitext">Links</span></a>
@@ -197,5 +199,6 @@
         <div id="altscriptunbind"></div>
         <script src="js/modals.js"></script>
         <script>userstate()</script>
+        <script>destinycontrolhandle()</script>
     </body>
 </html>

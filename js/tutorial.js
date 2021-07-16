@@ -28,14 +28,27 @@ function resettutorialbutton() {
 
 }
 
+function cleantooltips() {
+    var tooltips = document.getElementsByClassName('tooltip')
+    var arrayLength = tooltips.length;
+    for (var i = 0; i < arrayLength; i++) {
+        if (tooltips[i].lastChild.id == 'tutorialbutton'){
+            continue
+          }
+        if (tooltips[i].classList.contains('tooltip')){
+            removetooltip(tooltips[i],'item')
+        }
+    }    
+}
+
 function tutorial() {
-    tutorialtooltip('adddestiny','Click here to begin by adding your first destiny point!','right',function(){
+    tutorialtooltip('adddestiny','You can add destiny points by clicking here!','right',function(){
         tutorialtooltip('fliplight','Click here to flip a dark side point to a light side point.','top',function(){
             tutorialtooltip('adddestiny','Try add a few more points, it will be easier to see what you are doing.','right',function(){
                 tutorialtooltip('adddestiny','Try add a few more points, it will be easier to see what you are doing.','right',function(){
                     tutorialtooltip('adddestiny','Try add a few more points, it will be easier to see what you are doing.','right',function(){
                         tutorialtooltip('numdarkdiv','The numbers under "NUM" tell you how many of each destiny point is out. Click here to move on.','right',function(){
-                            tutorialtooltip('flipdark','Try flipping some points between light and dark.','bottom',function(){
+                            tutorialtooltip('fliplight','Try flipping some points from dark to light.','bottom',function(){
                                 tutorialtooltip('useddarkdiv','The numbers under "USED" tell you how many of each destiny point has been used (flipped). This feature is useful to show players how many points of each type have been used in a session. Click here to move on.','right',function(){
                                     tutorialtooltip('destiny0','You can click the tokens to flip them, give it a go and watch the "USED" number increase.','right',function(){
                                         tutorialtooltip('destiny1','Try another.','right',function(){

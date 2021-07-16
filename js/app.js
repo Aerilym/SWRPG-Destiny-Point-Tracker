@@ -44,7 +44,6 @@ function update_number(counter, action){
 function change_destiny(destinyID){
     var destinypoint = document.getElementById(destinyID)
     imgname = destinypoint.src.slice(-9)
-    console.log(imgname)
     if (imgname == 'dark0.svg'){
         destinypoint.src = 'images/light.svg'
         update_counter('dark', '+')
@@ -75,6 +74,7 @@ function add_destiny(){
     var destinytray = document.getElementById('destinytray')
     destinytray.appendChild(destinypoint)
     update_number('dark', '+')
+    destinycontrolhandle();
 }
 
 function remove_destiny(){
@@ -91,7 +91,7 @@ function remove_destiny(){
     if (numpoints == 0){
         togglehide('destinypointsheading','flex')
     }
-
+    destinycontrolhandle();
 }
 
 function flip(goal) {
@@ -102,6 +102,7 @@ function flip(goal) {
     const tokens = destinytray.children
     if (goal == 'dark'){
         if (lightcount == 0){
+            destinycontrolhandle();
             return false
         }
         let i = tokencount
@@ -110,12 +111,14 @@ function flip(goal) {
             tokenID = tokens[i].firstChild.id
             if (srcslice == 'light.svg'){
                 change_destiny(tokenID)
+                destinycontrolhandle();
                 return false
             }
             i--;
           }
     } else if (goal == 'light'){
         if (darkcount == 0){
+            destinycontrolhandle();
             return false
         }
         let i = 1
@@ -124,6 +127,7 @@ function flip(goal) {
             tokenID = tokens[i].firstChild.id
             if (srcslice == 'dark0.svg'){
                 change_destiny(tokenID)
+                destinycontrolhandle();
                 return false
             }
             i++;
@@ -135,4 +139,18 @@ function flippos(elementID) {
     var maincontent = document.getElementById('maincontent')
     var element = document.getElementById(elementID)
     maincontent.appendChild(element)
+}
+
+function haslight() {
+    var lightcount = parseInt(document.getElementById('lightnumber').innerText)
+    if (lightcount>0) {
+        return true
+    }
+}
+
+function hasdark() {
+    var darkcount = parseInt(document.getElementById('darknumber').innerText)
+    if (darkcount>0) {
+        return true
+    }
 }

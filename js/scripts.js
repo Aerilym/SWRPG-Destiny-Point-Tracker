@@ -97,12 +97,15 @@ function deleteeye(source){
 function rightalign() {
     var maincontent = document.getElementById('maincontent')
     var marginsplit = document.getElementById('marginsplit')
+    var alignbutton = document.getElementById('alignrightbutton')
     if (maincontent.classList.contains('topright')){
         maincontent.classList.remove('topright');
         marginsplit.classList.remove('marginsplit2')
+        alignbutton.innerText = 'Align Right'
     } else {
         maincontent.classList.add('topright');
         marginsplit.classList.add('marginsplit2')
+        alignbutton.innerText = 'Align Left'
     }
 }
 
@@ -158,9 +161,14 @@ function addtooltip(elementID,text='placeholder',location='top') {
     tooltip.appendChild(element)
 }
 
-function removetooltip(elementID) {
-    var element = document.getElementById(elementID)
-    var tooltip = element.parentNode
+function removetooltip(ele,by='id') {
+    if (by == 'id') {
+        var element = document.getElementById(ele)
+        var tooltip = element.parentNode
+    } else if (by = 'item') {
+        var element = ele.lastChild
+        var tooltip = ele
+    }
     tooltip.parentNode.insertBefore(element,tooltip)
     tooltip.remove()
 }
@@ -219,4 +227,40 @@ function firsttime() {
         tooltip.onclick = function(){removetooltip('tutorialbutton')};
     }
     )
+}
+
+function destinycontrolhandle() {
+    var adddestiny = document.getElementById('adddestiny')
+    var removedestiny = document.getElementById('removedestiny')
+    var fliplight = document.getElementById('fliplight')
+    var flipdark = document.getElementById('flipdark')
+    if (hasdark() || haslight()){
+        if (removedestiny.classList.contains('hideitem')) {
+            removedestiny.classList.remove('hideitem')
+        }
+    } else {
+        if (!removedestiny.classList.contains('hideitem')) {
+            removedestiny.classList.add('hideitem')
+        }
+    }
+
+    if (hasdark()) {
+        if (fliplight.classList.contains('hideitem')) {
+            fliplight.classList.remove('hideitem')
+        }
+    } else {
+        if (!fliplight.classList.contains('hideitem')) {
+            fliplight.classList.add('hideitem')
+        }
+    }
+    
+    if (haslight()) {
+        if (flipdark.classList.contains('hideitem')) {
+            flipdark.classList.remove('hideitem')
+        }
+    } else {
+        if (!flipdark.classList.contains('hideitem')) {
+            flipdark.classList.add('hideitem')
+        }
+    }
 }

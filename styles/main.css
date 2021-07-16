@@ -192,6 +192,7 @@ body.darkmode a:link:active, a:visited:active {
 .keybindcontainer{
     margin: 6px;
     display: inline-block;
+    margin-left: 20px;
 }
 
 .keybindtable td{
@@ -234,7 +235,8 @@ body.darkmode a:link:active, a:visited:active {
 
 .buttonblock h3{
     margin-top: 6px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
+    font-size: 16px;
 }
 
 .buttonf{
@@ -243,4 +245,8 @@ body.darkmode a:link:active, a:visited:active {
 
 .buttonmove{
     width: 170px;
+}
+
+.hideitem{
+    display: none;
 }
