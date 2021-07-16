@@ -13,11 +13,11 @@
 
 ### Why do I get a prompt to click the + button every time?
 
-    The tooltip showing you how to being and suggesting the tutorial comes up for new users. If this is popping up every time you use the tool it means you have cookies disabled. Cookies are the only way the website can remember you so if you have them off it's impossible for the website to recognise you or know you've visited. [You can lean how to enable cookies here](https://support.google.com/accounts/answer/61416).
+The tooltip showing you how to being and suggesting the tutorial comes up for new users. If this is popping up every time you use the tool it means you have cookies disabled. Cookies are the only way the website can remember you so if you have them off it's impossible for the website to recognise you or know you've visited. [You can lean how to enable cookies here](https://support.google.com/accounts/answer/61416).
 
 ### Why does the tool not remember my dark/light mode preference?
 
-    See the [previous answer](#why-do-i-get-a-prompt-to-click-the--button-every-time) to [enable cookies](https://support.google.com/accounts/answer/61416). Otherwise the tool will default to your operating system dark mode preference.
+See the [previous answer](#why-do-i-get-a-prompt-to-click-the--button-every-time) to [enable cookies](https://support.google.com/accounts/answer/61416). Otherwise the tool will default to your operating system dark mode preference.
 
 ### How do I use the destiny point tracker on...?
 
