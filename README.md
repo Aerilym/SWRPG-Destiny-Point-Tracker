@@ -9,6 +9,27 @@
 * [Modification Guide](#Modification-Guide) - Some aspects can be modified with no knowledge of programming.
 * [Other Tools](https://aerilym.github.io/) - Other tools, apps, and things made by me.
 
+## Frequently Asked Questions
+
+### Why do I get a prompt to click the + button every time?
+
+    The tooltip showing you how to being and suggesting the tutorial comes up for new users. If this is popping up every time you use the tool it means you have cookies disabled. Cookies are the only way the website can remember you so if you have them off it's impossible for the website to recognise you or know you've visited. [You can lean how to enable cookies here](https://support.google.com/accounts/answer/61416).
+
+### Why does the tool not remember my dark/light mode preference?
+
+    See the [previous answer](#why-do-i-get-a-prompt-to-click-the--button-every-time) to [enable cookies](https://support.google.com/accounts/answer/61416). Otherwise the tool will default to your operating system dark mode preference.
+
+### How do I use the destiny point tracker on...?
+
+* [My computer](#local-guide)
+* [OBS or similar as a browser scene](#obs-open-broadcaster-software-guide)
+
+### How do I ...?
+
+* [Hide all the buttons](#hiding-things)
+* [Change the background colour](#Changing-the-background-colour)
+* [Change the destiny point images](#Changing-the-destiny-point-images)
+
 ## Help & Guides
 
 Press the tutorial button on the page for an in-depth walkthrough of how to use the tool.
@@ -39,12 +60,12 @@ This works with the online version or a downloaded version.
 
 ### Modification Guide
 
-* **Hiding things -** Parts of the tools can be hidden or shown using the available buttons. Try them out. Everything other than the tool can also be hidden using the eye icon.
-* **Changing the destiny point images -** The image tokens used for dark and light side points can be change by replacing the `dark0.sgv` and `light.svg` files with images of your choice. If you're willing to change some lines of code: open index.html and replace all occurrences of `dark0.sgv` and `light.svg` with the respective file names your images have. This allows you to use [any valid web image format](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#supported_image_formats).
+* <span id="hiding-things"></span> **Hiding things -** Parts of the tools can be hidden or shown using the available buttons. Try them out. Everything other than the tool can also be hidden using the eye icon.
+* <span id="Changing-the-destiny-point-images"></span> **Changing the destiny point images -** The image tokens used for dark and light side points can be change by replacing the `dark0.sgv` and `light.svg` files with images of your choice. If you're willing to change some lines of code: open index.html and replace all occurrences of `dark0.sgv` and `light.svg` with the respective file names your images have. This allows you to use [any valid web image format](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#supported_image_formats).
 
     NOTE: currently the image file names must be 9 characters long including the file extension (so your new file names much have the same length as the original file names) Similar to the file name change, if you replace all occurrences of '-9' to the length of your new file names, you can use any file name length (both files need to have the same file name length).
 
-* **Changing the background colour -** Opening the main.css file, change the colour of `background-color` in these two blocks:
+* <span id="Changing-the-background-colour"></span> **Changing the background colour -** Opening the main.css file, change the colour of `background-color` in these two blocks:
   
 ```css
 body{
