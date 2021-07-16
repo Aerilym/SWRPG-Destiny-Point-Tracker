@@ -9,9 +9,10 @@
         <meta property="og:title" content="SWRPG Destiny Point Tracker">
         <meta property="og:type" content="website">
         <meta property="og:description" content="A tool for tracking destiny points in your SWRPG game.">
-        <meta property="og:image" content="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/images/ogimage.png">
+        <meta property="og:image" content="https://aerilym.github.io/images/swrpgogimage.png">
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="tooltips.css"
+        <link rel="stylesheet" href="tooltips.css">
+        <link rel="stylesheet" href="modals.css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBKTVX6696"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -162,15 +163,39 @@
             </div>
             <br>
             <hr>
-            For information, help, and guides, head to the Github repo here: <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker" target="_blank">github.com/Aerilym/SWRPG-Destiny-Point-Tracker</a>
             <div style="font-size: smaller;">
-                <p>The token images are adapted from assets originally made by <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> and modified for use in this tool. This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
+                <button id="information" class="button buttonu">Information</button>
+                
                 <p>Created by <a href="https://aerilym.github.io/" target="_blank">Ryan Miller</a>. I also do a SWRPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
                 <p>I am not associated with FFG Star Wars RPG</p>
                 <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#7a27c2', 'Y8Y85AWOK');kofiwidget2.draw();</script>
             </div>
         </div>
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Information</h2>
+      </div>
+      <div class="modal-body">
+        <p>For guides, detailed information, help, and download links head to the Github repo here: <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker" target="_blank">github.com/Aerilym/SWRPG-Destiny-Point-Tracker</a></p>
+        <p>This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
+        <p>The token images are adapted from assets originally made by <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> and modified for use in this tool.</p>
+        <p>Keybinds are handled by a small JavaScript library called <a href="https://craig.is/killing/mice">Mousetrap.js</a>.</p>
+      </div>
+      <div class="modal-footer">
+        <a title="Support me on ko-fi.com" class="kofi-button" style="background-color:#7a27c2;" href="https://linktr.ee/Aerilym" target="_blank"> <span class="kofitext">Links</span></a>
+        <a title="Support me on ko-fi.com" class="kofi-button" style="background-color:#7a27c2;" href="mailto:aerilymbiz@gmail.com" target="_blank"> <span class="kofitext">Contact</span></a>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#7a27c2', 'Y8Y85AWOK');kofiwidget2.draw();</script>
+      </div>
+    </div>
+  
+  </div>
         <div id="altscriptunbind"></div>
+        <script src="js/modals.js"></script>
         <script>userstate()</script>
     </body>
 </html>
