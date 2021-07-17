@@ -80,6 +80,9 @@ function add_destiny(){
 }
 
 function remove_destiny(){
+    if (!haslight() && !hasdark()) {
+        return false        
+    }
     var destinytray = document.getElementById('destinytray')
     if (destinytray.lastChild.className != 'counterheading'){
         if (destinytray.lastChild.firstChild.src.slice(-9) == 'dark0.svg'){
