@@ -124,3 +124,11 @@ body.darkmode{
 ## Issues, Bugs, Requests, Questions, Additions, and more
 
 Please use the provided github ['issues'](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/issues) section to report any bugs or issues. This area can also be used to submit guides (documentation), requests, questions, additions, and more. Please use appropriate labels and check to see if someone has already made a similar post.
+
+## Other Star Wars RPG Tools I Use
+
+These tools are made by other people and I have no official association with their creators. These are just tools I recommend with a sentence on how I use them.
+
+* [SWRPG Community Website](https://www.swrpgcommunity.com/) - My go to place for tools, assets, homebrew rules, podcasts, and pretty much any SWRPG content I need.
+* [SWRPG Subreddit](https://www.reddit.com/r/swrpg/) - Browsing new tools and discussions about the system.
+* [RPG Sessions](https://rpgsessions.com/) - Mostly campaign management and NPC sheets but I hear from others that the game table is great.
