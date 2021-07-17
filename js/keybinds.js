@@ -3,12 +3,12 @@
 //NOTE pressing shift and = is actualy shift and + as well as just pressing +, as when you hold shift it changes the = key to +, this happens to all keys with a shift option.
 //NOTE the + symbol in the keybinds indicated a key combination, so shift+h is holding shift and clicking h
 //BINDS             1           2     Non-Shift
-hidebuttons =   ['shift+h',     '',     'h']
-hideeye =       ['shift+e',     '',     'e']
-adddestiny =    ['shift+=',     '+',    '=']
-removedestiny = ['shift+-',     '_',    '-']
-fliptolight =   ['shift+up',    '',     'up']
-fliptodark =    ['shift+down',  '',     'down']
+hidebuttons =   ['shift+h',     '',     'h']        //Hide/Unhide buttons
+hideeye =       ['shift+e',     '',     'e']        //Hide/Unhide eye button
+adddestiny =    ['shift+=',     '+',    '=']        //Add destiny point
+removedestiny = ['shift+-',     '_',    '-']        //Remove destiny point
+fliptolight =   ['shift+up',    '',     'up']       //Flip dark side point to light
+fliptodark =    ['shift+down',  '',     'down']     //Flip light side point to dark
 
 //Hide/Unhide the buttons and information below the tool
 Mousetrap.bind(hidebuttons[0], function(e) {
