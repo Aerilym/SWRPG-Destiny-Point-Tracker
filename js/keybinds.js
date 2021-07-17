@@ -104,10 +104,12 @@ function bindnonshift() {
 
 //Umbinds Non-shift keybinds when called
 function unbindnonshift() {
-    Mousetrap.unbind('h');
-    Mousetrap.unbind('e');
-    Mousetrap.unbind('up');
-    Mousetrap.unbind('down');
+    Mousetrap.unbind(adddestiny[2]);
+    Mousetrap.unbind(removedestiny[2]);
+    Mousetrap.unbind(hidebuttons[2]);
+    Mousetrap.unbind(hideeye[2]);
+    Mousetrap.unbind(fliptolight[2]);
+    Mousetrap.unbind(fliptodark[2]);
 }
 
 function writekeybinds() {
