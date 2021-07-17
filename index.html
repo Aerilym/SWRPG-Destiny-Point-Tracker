@@ -22,7 +22,6 @@
         <script src="js/scripts.js"></script>
         <script src="js/app.js"></script>
         <script src="js/mousetrap.min.js"></script>
-        <script src="js/keybinds.js"></script>
         <script src="js/tooltips.js"></script>
         <script src="js/tutorial.js"></script>
         <noscript style="font-size: 60px; font-weight:bold">
@@ -120,39 +119,39 @@
                           </tr>
                           <tr>
                             <td>Add Destiny Point: </td>
-                            <td><kbd>+</kbd></td>
-                            <td><kbd>=</kbd></td>
-                            <td><kbd></kbd></td>
+                            <td><kbd id="KBadddestiny0">+</kbd></td>
+                            <td><kbd id="KBadddestiny1">=</kbd></td>
+                            <td><kbd id="KBadddestiny2"></kbd></td>
                           </tr>
                           <tr>
                             <td>Remove Destiny Point:</td>
-                            <td><kbd>-</kbd></td>
-                            <td><kbd>_</kbd></td>
-                            <td><kbd></kbd></td>
+                            <td><kbd id="KBremovedestiny0">-</kbd></td>
+                            <td><kbd id="KBremovedestiny1">_</kbd></td>
+                            <td><kbd id="KBremovedestiny2"></kbd></td>
                           </tr>
                           <tr>
                             <td>Flip Point to Light</td>
-                            <td><kbd>shift + up</kbd></td>
-                            <td><kbd></kbd></td>
-                            <td><kbd>up</kbd></td>
+                            <td><kbd id="KBfliptolight0">shift + up</kbd></td>
+                            <td><kbd id="KBfliptolight1"></kbd></td>
+                            <td><kbd id="KBfliptolight2">up</kbd></td>
                           </tr>
                           <tr>
                             <td>Flip Point to Dark</td>
-                            <td><kbd>shift + down</kbd></td>
-                            <td><kbd></kbd></td>
-                            <td><kbd>down</kbd></td>
+                            <td><kbd id="KBfliptodark0">shift + down</kbd></td>
+                            <td><kbd id="KBfliptodark1"></kbd></td>
+                            <td><kbd id="KBfliptodark2">down</kbd></td>
                           </tr>
                           <tr>
                             <td>Hide/Unhide Settings</td>
-                            <td><kbd>shift + h</kbd></td>
-                            <td><kbd></kbd></td>
-                            <td><kbd>h</kbd></td>
+                            <td><kbd id="KBhidebuttons0">shift + h</kbd></td>
+                            <td><kbd id="KBhidebuttons1"></kbd></td>
+                            <td><kbd id="KBhidebuttons2">h</kbd></td>
                           </tr>
                           <tr>
                             <td>Hide/Unhide Eye Button</td>
-                            <td><kbd>shift + e</kbd></td>
-                            <td><kbd></kbd></td>
-                            <td><kbd>e</kbd></td>
+                            <td><kbd id="KBhideeye0">shift + e</kbd></td>
+                            <td><kbd id="KBhideeye1"></kbd></td>
+                            <td><kbd id="KBhideeye2">e</kbd></td>
                           </tr>
                         </table>
                     </table>
@@ -192,7 +191,9 @@
     </div>
   </div>
         <div id="altscriptunbind"></div>
+        <script src="js/keybinds.js"></script>
         <script src="js/modals.js"></script>
+        <script>writekeybinds()</script>
         <script>userstate()</script>
         <script>destinycontrolhandle()</script>
         <script>startup()</script>
