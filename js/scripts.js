@@ -147,6 +147,11 @@ function addtooltip(elementID,text='placeholder',location='top') {
     }
     var element = document.getElementById(elementID)
     var tooltip = document.createElement('div')
+
+    if (element.parentNode.classList.contains('tooltip') && !element.parentNode.classList.contains('tutorialtip')) {
+        removetooltip(elementID)
+    }
+
     tooltip.classList.add('tooltip')
     tooltip.classList.add('tooltip'+classsuffix)
     var tooltiptext = document.createElement('span')
@@ -192,6 +197,7 @@ function userstate() {
     if (vercookie == null){
         firsttime()
     } else {
+        addtooltip('tutorialbutton','Begins a tooltip based walkthrough tutorial!','right')
         var userversion = vercookie
         if (isoldversion(userversion)){
             console.log(newfeatures(userversion))
@@ -220,11 +226,11 @@ function newfeatures(userversion) {
 
 function firsttime() {
     tutorialtooltip('adddestiny','Click here to begin by adding your first destiny point!','right',function(){
-        addtooltip('tutorialbutton','You can click here to begin a short walkthrough tutorial if you want to learn about the tool and how to use it. Otherwise, have fun!','bottom')
+        addtooltip('tutorialbutton','You can click here to begin a short walkthrough tutorial if you want to learn about the tool and how to use it. Otherwise, have fun!','right')
         locktooltip('tutorialbutton','onmouseover')
         var element = document.getElementById('tutorialbutton')
         var tooltip = element.parentNode
-        tooltip.onclick = function(){removetooltip('tutorialbutton')};
+        tooltip.onclick = function(){removetooltip('tutorialbutton');addtooltip('tutorialbutton','Begins a tooltip based walkthrough tutorial!','right');};
     }
     )
 }
@@ -263,4 +269,8 @@ function destinycontrolhandle() {
             flipdark.classList.add('hideitem')
         }
     }
+}
+
+function startup() {
+    addtooltip('toggletooltipbutotn','Toggles information tooltips like this on all elements!','right')
 }

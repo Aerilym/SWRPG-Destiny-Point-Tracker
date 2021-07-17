@@ -5,6 +5,7 @@
         <meta name="description" content="Keep track of destiny points for your star wars ffg games.">
         <meta name="author" content="Ryan Miller">
         <meta name="keywords" content="SWRPG, FFG, AOTOR, Star Wars, destiny points">
+        <link rel="shortcut icon" type="image/jpg" href="images/dark0.svg"/>
         <meta charset="UTF-8">
         <meta property="og:title" content="SWRPG Destiny Point Tracker">
         <meta property="og:type" content="website">
@@ -89,7 +90,9 @@
                         <br>
                         <button id="alignrightbutton" class="button buttonu buttonf" onclick="rightalign()">Align Right</button>
                         <br>
-                        <button id="tutorialbutton" class="button buttonu buttonf" onclick="cleantooltips();tutorial();tutorialendbutton();">Begin Tutorial</button>
+                        <button id="tutorialbutton" class="button buttonu buttonf" onclick="tutorial();tutorialendbutton();">Begin Tutorial</button>
+                        <br>
+                        <button id="toggletooltipbutotn" class="button buttonu buttonf" onclick="infotooltips();">Enable Tooltips</button>
                     </div>
                     <div class="buttonblock">
                         <h2>Move Elements</h2>
@@ -166,13 +169,12 @@
             <div style="font-size: smaller;">
                 <button id="information" class="button buttonu">Information</button>
                 <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases" target="_blank"><button id="download" class="button buttonu">Download</button></a>
-                <p>Created by <a href="https://aerilym.github.io/" target="_blank">Ryan Miller</a>. I also do a SWRPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
+                <p>Created by <a href="https://aerilym.github.io/" target="_blank">Ryan Miller</a>. I also do a Star Wars RPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
                 <p>I am not associated with FFG Star Wars RPG</p>
             </div>
         </div>
         <!-- The Modal -->
 <div id="myModal" class="modal">
-
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
@@ -185,7 +187,7 @@
         <p>The token images are adapted from assets originally made by <a href="https://rpgsessions.com/" target="_blank">https://rpgsessions.com/</a> and modified for use in this tool.</p>
         <p>Keybinds are handled by a small JavaScript library called <a href="https://craig.is/killing/mice" target="_blank">Mousetrap.js</a>.</p>
         <p>The total size of the tool is approximately 20KB.</p>
-        <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/#Frequently-Asked-Questions" target="_blank"><button id="download" class="button buttonu">Frequently Asked Questions</button></a>
+        <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/#Frequently-Asked-Questions" target="_blank"><button id="FAQ" class="button buttonu">Frequently Asked Questions</button></a>
         
       </div>
       <div class="modal-footer">
@@ -200,5 +202,6 @@
         <script src="js/modals.js"></script>
         <script>userstate()</script>
         <script>destinycontrolhandle()</script>
+        <script>startup()</script>
     </body>
 </html>
