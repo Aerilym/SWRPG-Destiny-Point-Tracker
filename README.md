@@ -6,7 +6,8 @@
 * [Download](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases) - If you download the tool you can run it locally in a web browser or in a studio program like [OBS](https://obsproject.com/).
 * [OBS Guide](#OBSGUIDE) - You can use this tool as a browser scene on [OBS](https://obsproject.com/) or similar, for use as a webcam overlay or live asset.
 * [Local Guide](#Local-Guide) - You can use the tool locally in your web browser.
-* [Modification Guide](#Modification-Guide) - Some aspects can be modified with no knowledge of programming.
+* [Keybind Guide](#keybind-guide) - You can change all the keybinds.
+* [General Modification Guide](#general-modification-guide) - Some aspects can be modified with no knowledge of programming.
 * [Other Tools](https://aerilym.github.io/) - Other tools, apps, and things made by me.
 
 ## Frequently Asked Questions
@@ -74,17 +75,29 @@ This works with the online version or a downloaded version.
 
 NOTE: If a keybind isn't working, try using `ctrl` in place of `shift`. Eg. Instead of `shift + up` try `ctrl + up`. I'm honestly not sure why this happens, but I've found when using it in an OBS browser source `shift` is replaced with `ctrl` for the keybinds, I think this is either an OBS issue or a windows issue.
 
-* You can change any keybind by going to `js/keybinds.js` and changing the first argument of the `Mousetrap.bind()` function. For advanced usage, see the [documentation for Mousetrap.js](https://craig.is/killing/mice). In the case of the below example, you can change the keybind for adding a destiny point by changing `plus` to another key (eg. `q`) or a key combination (eg. `shift+q`). NOTE: the keybind table on the page will NOT update with any changes (the table is static so never changes) but your keybinds should still work if you do it right.
+* You can change any keybind by going to `js/keybinds.js` and changing the respective keybind as defined in the top definition block:
 
 ```JavaScript
+hidebuttons =   ['shift+h',     '',     'h']
+hideeye =       ['shift+e',     '',     'e']
+adddestiny =    ['plus',        '=',    '']
+removedestiny = ['-',           '_',    '']
+fliptolight =   ['shift+up',    '',     'up']
+fliptodark =    ['shift+down',  '',     'down']
+```
+
+For more advanced usage, each keybind is defined by the first argument of the `Mousetrap.bind()` function. For advanced usage, see the [documentation for Mousetrap.js](https://craig.is/killing/mice). In the case of the below example, you can change the keybind for adding a destiny point by changing `plus` to another key (eg. `q`) or a key combination (eg. `shift+q`). NOTE: the keybind table on the page will update with any changes as it is dynamic, check the table to see if your keybinds are shown.
+
+```JavaScript
+adddestiny =    ['plus','=','']
 //Adds a destiny point to the tracker
-Mousetrap.bind('plus', function(e) {
+Mousetrap.bind(adddestiny[0], function(e) {
     add_destiny()
     return false;
 });
 ```
 
-### Modification Guide
+### General Modification Guide
 
 * <span id="hiding-things"></span> **Hiding things -** Parts of the tools can be hidden or shown using the available buttons. Try them out. Everything other than the tool can also be hidden using the eye icon.
 * <span id="Changing-the-destiny-point-images"></span> **Changing the destiny point images -** The image tokens used for dark and light side points can be change by replacing the `dark0.sgv` and `light.svg` files with images of your choice. If you're willing to change some lines of code: open index.html and replace all occurrences of `dark0.sgv` and `light.svg` with the respective file names your images have. This allows you to use [any valid web image format](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#supported_image_formats).
