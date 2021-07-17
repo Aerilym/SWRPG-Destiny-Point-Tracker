@@ -75,18 +75,19 @@ This works with the online version or a downloaded version.
 
 NOTE: If a keybind isn't working, try using `ctrl` in place of `shift`. Eg. Instead of `shift + up` try `ctrl + up`. I'm honestly not sure why this happens, but I've found when using it in an OBS browser source `shift` is replaced with `ctrl` for the keybinds, I think this is either an OBS issue or a windows issue.
 
-* You can change any keybind by going to `js/keybinds.js` and changing the respective keybind as defined in the top definition block:
+* You can change any keybind by going to `js/keybinds.js` and changing the respective keybind as defined in the top definition block (NOTE: the keybind table on the page will update with any changes as it is dynamic, check the table to see if your keybinds are shown.):
 
 ```JavaScript
-hidebuttons =   ['shift+h',     '',     'h']
-hideeye =       ['shift+e',     '',     'e']
-adddestiny =    ['plus',        '=',    '']
-removedestiny = ['-',           '_',    '']
-fliptolight =   ['shift+up',    '',     'up']
-fliptodark =    ['shift+down',  '',     'down']
+//BINDS             1           2     Non-Shift
+hidebuttons =   ['shift+h',     '',     'h']        //Hide/Unhide buttons
+hideeye =       ['shift+e',     '',     'e']        //Hide/Unhide eye button
+adddestiny =    ['shift+=',     '+',    '=']        //Add destiny point
+removedestiny = ['shift+-',     '_',    '-']        //Remove destiny point
+fliptolight =   ['shift+up',    '',     'up']       //Flip dark side point to light
+fliptodark =    ['shift+down',  '',     'down']     //Flip light side point to dark
 ```
 
-For more advanced usage, each keybind is defined by the first argument of the `Mousetrap.bind()` function. For advanced usage, see the [documentation for Mousetrap.js](https://craig.is/killing/mice). In the case of the below example, you can change the keybind for adding a destiny point by changing `plus` to another key (eg. `q`) or a key combination (eg. `shift+q`). NOTE: the keybind table on the page will update with any changes as it is dynamic, check the table to see if your keybinds are shown.
+For advanced usage: each keybind is defined by the first argument of the `Mousetrap.bind()` function. See the [documentation for Mousetrap.js](https://craig.is/killing/mice). In the case of the below example, you can change the keybind for adding a destiny point by changing `plus` to another key (eg. `q`) or a key combination (eg. `shift+q`).
 
 ```JavaScript
 adddestiny =    ['plus','=','']
