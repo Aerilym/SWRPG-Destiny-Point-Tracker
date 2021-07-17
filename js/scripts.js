@@ -1,3 +1,4 @@
+// For front end website functions -- Created by Ryan Miller https://aerilym.github.io/
 let version = '1.0.1';
 
 
@@ -134,63 +135,6 @@ function altkeybinds() {
     }
     
 }
-
-function addtooltip(elementID,text='placeholder',location='top') {
-    if (location == 'bottom'){
-        classsuffix = 'bottom'
-    } else if (location == 'left'){
-        classsuffix = 'left'
-    } else if (location == 'right'){
-        classsuffix = 'right'
-    } else {
-        classsuffix = 'top'
-    }
-    var element = document.getElementById(elementID)
-    var tooltip = document.createElement('div')
-
-    if (element.parentNode.classList.contains('tooltip') && !element.parentNode.classList.contains('tutorialtip')) {
-        removetooltip(elementID)
-    }
-
-    tooltip.classList.add('tooltip')
-    tooltip.classList.add('tooltip'+classsuffix)
-    var tooltiptext = document.createElement('span')
-    tooltiptext.classList.add('tooltiptext')
-    tooltiptext.classList.add('tooltiptext'+classsuffix)
-    if (text.length>64){
-        tooltiptext.classList.add('tooltiptextwide')
-    }
-    tooltiptext.innerText = text
-    tooltip.appendChild(tooltiptext)
-    element.parentNode.insertBefore(tooltip,element)
-    tooltip.appendChild(element)
-}
-
-function removetooltip(ele,by='id') {
-    if (by == 'id') {
-        var element = document.getElementById(ele)
-        var tooltip = element.parentNode
-    } else if (by = 'item') {
-        var element = ele.lastChild
-        var tooltip = ele
-    }
-    tooltip.parentNode.insertBefore(element,tooltip)
-    tooltip.remove()
-}
-
-
-function locktooltip(elementID, endcondition='onmouseover') {
-    var element = document.getElementById(elementID)
-    var tooltip = element.parentNode
-    tooltiptext = tooltip.children[0]
-    tooltiptext.classList.add('locktooltipon')
-    if (endcondition == 'onmouseover'){
-        tooltip.onmouseover = function(){tooltiptext.classList.remove('locktooltipon')};
-    } else if (endcondition == 'onclick'){
-        tooltip.onclick = function(){tooltiptext.classList.remove('locktooltipon')};
-    }
-}
-
 
 function userstate() {
     var vercookie = getCookie("userversion");

@@ -1,3 +1,5 @@
+// For modal handling -- Created by Ryan Miller https://aerilym.github.io/
+
 // Get the modal
 var modal = document.getElementById("myModal");
 

@@ -1,3 +1,5 @@
+// For running the tool and tool related backend functions -- Created by Ryan Miller https://aerilym.github.io/
+
 function update_counter(counter, action){
     var darkcounter = document.getElementById('darkcounter')
     var lightcounter = document.getElementById('lightcounter')

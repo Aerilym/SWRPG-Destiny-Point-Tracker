@@ -1,12 +1,14 @@
+/* Tooltip styles -- Created by Ryan Miller https://aerilym.github.io/ */
+
 /* Tooltip container */
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted #4d4d4d; /* If you want dots under the hoverable text */
-  }
+}
   
-  /* Tooltip text */
-  .tooltip .tooltiptext {
+/* Tooltip text */
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #4d4d4d;
@@ -18,21 +20,21 @@
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
-  }
+}
   
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
 
-  .tooltip .tooltiptexttop {
+.tooltip .tooltiptexttop {
     width: 120px;
     bottom: 100%;
     left: 50%;
     margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-  }
+}
 
-  .tooltip .tooltiptexttop::after {
+.tooltip .tooltiptexttop::after {
     content: " ";
     position: absolute;
     top: 100%; /* At the bottom of the tooltip */
@@ -41,16 +43,16 @@
     border-width: 5px;
     border-style: solid;
     border-color: #4d4d4d transparent transparent transparent;
-  }
+}
 
-  .tooltip .tooltiptextbottom {
+.tooltip .tooltiptextbottom {
     width: 120px;
     top: 100%;
     left: 50%;
     margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-  }
+}
 
-  .tooltip .tooltiptextbottom::after {
+.tooltip .tooltiptextbottom::after {
     content: " ";
     position: absolute;
     bottom: 100%;  /* At the top of the tooltip */
@@ -59,15 +61,15 @@
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #4d4d4d transparent;
-  }
+}
 
 
-  .tooltip .tooltiptextright {
+.tooltip .tooltiptextright {
     top: -5px;
     left: 105%;
-  }
+}
 
-  .tooltip .tooltiptextright::after {
+.tooltip .tooltiptextright::after {
     content: " ";
     position: absolute;
     top: 50%;
@@ -76,14 +78,14 @@
     border-width: 5px;
     border-style: solid;
     border-color: transparent #4d4d4d transparent transparent;
-  }
+}
 
-  .tooltip .tooltiptextleft {
+.tooltip .tooltiptextleft {
     top: -5px;
     right: 105%;
-  }
+}
 
-  .tooltip .tooltiptextleft::after {
+.tooltip .tooltiptextleft::after {
     content: " ";
     position: absolute;
     top: 50%;
@@ -92,14 +94,13 @@
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent transparent #4d4d4d;
-  }
+}
 
-
-  .locktooltipon{
+.locktooltipon{
     visibility: visible !important;
-  }
+}
 
-  .tooltiptextwide{
+.tooltiptextwide{
     width: 240px !important;
-  }
+}
   
