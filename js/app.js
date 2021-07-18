@@ -46,13 +46,13 @@ function update_number(counter, action){
 function change_destiny(destinyID){
     var destinypoint = document.getElementById(destinyID)
     imgname = destinypoint.src.slice(-9)
-    if (imgname == 'dark0.svg'){
-        destinypoint.src = 'images/light.svg'
+    if (imgname == 'dark0.png'){
+        destinypoint.src = 'images/light.png'
         update_counter('dark', '+')
         update_number('dark', '-')
         update_number('light', '+')
-    } else if (imgname == 'light.svg') {
-        destinypoint.src = 'images/dark0.svg'
+    } else if (imgname == 'light.png') {
+        destinypoint.src = 'images/dark0.png'
         update_counter('light', '+')
         update_number('dark', '+')
         update_number('light', '-')
@@ -72,7 +72,7 @@ function add_destiny(){
     destinyimage.id = 'destiny' + numpoints
     destinyimage.className = 'destinysvg'
     destinypoint.appendChild(destinyimage)
-    destinyimage.src = 'images/dark0.svg'
+    destinyimage.src = 'images/dark0.png'
     var destinytray = document.getElementById('destinytray')
     destinytray.appendChild(destinypoint)
     update_number('dark', '+')
@@ -85,9 +85,9 @@ function remove_destiny(){
     }
     var destinytray = document.getElementById('destinytray')
     if (destinytray.lastChild.className != 'counterheading'){
-        if (destinytray.lastChild.firstChild.src.slice(-9) == 'dark0.svg'){
+        if (destinytray.lastChild.firstChild.src.slice(-9) == 'dark0.png'){
             update_number('dark', '-')
-        } else if (destinytray.lastChild.firstChild.src.slice(-9) == 'light.svg'){
+        } else if (destinytray.lastChild.firstChild.src.slice(-9) == 'light.png'){
             update_number('light', '-')
         }
         destinytray.removeChild(destinytray.lastChild);
@@ -114,7 +114,7 @@ function flip(goal) {
         while (i >= 0) {
             srcslice = tokens[i].firstChild.src.slice(-9)
             tokenID = tokens[i].firstChild.id
-            if (srcslice == 'light.svg'){
+            if (srcslice == 'light.png'){
                 change_destiny(tokenID)
                 destinycontrolhandle();
                 return false
@@ -130,7 +130,7 @@ function flip(goal) {
         while (i <= tokencount) {
             srcslice = tokens[i].firstChild.src.slice(-9)
             tokenID = tokens[i].firstChild.id
-            if (srcslice == 'dark0.svg'){
+            if (srcslice == 'dark0.png'){
                 change_destiny(tokenID)
                 destinycontrolhandle();
                 return false
