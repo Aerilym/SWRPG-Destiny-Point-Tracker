@@ -22,6 +22,8 @@
         <script src="https://kit.fontawesome.com/8874fa11a1.js" crossorigin="anonymous"></script>
     </head>
     <body>
+      <div id="darksrc" class="" style="display: none;">images/dark0.png</div>
+      <div id="lightsrc" class="" style="display: none;">images/light.png</div>
         <script src="js/scripts.js"></script>
         <script src="js/app.js"></script>
         <script src="js/mousetrap.min.js"></script>
@@ -34,19 +36,19 @@
         <div class="maincont" id="maincontent">
             <div id="destinytracker" class="destinytracker">
                 <h1 class="counterheading">USED</h1>
-                <div class="counterimg" style="background-image: url(images/light.png);">
+                <div class="counterimg lightbg" style="background-image: url(images/light.png);">
                     <a id="lightcounter" class="countertxt">0</a>
                 </div>
-                <div id="useddarkdiv" class="counterimg" style="background-image: url(images/dark0.png);">
+                <div id="useddarkdiv" class="counterimg darkbg" style="background-image: url(images/dark0.png);">
                     <a id="darkcounter" class="countertxt">0</a>
                 </div>
             </div>
             <div id="destinynumber" class="destinytracker">
                 <h1 class="counterheading">NUM</h1>
-                <div class="counterimg" style="background-image: url(images/light.png);">
+                <div class="counterimg lightbg" style="background-image: url(images/light.png);">
                     <a id="lightnumber" class="countertxt">0</a>
                 </div>
-                <div id="numdarkdiv" class="counterimg" style="background-image: url(images/dark0.png);">
+                <div id="numdarkdiv" class="counterimg darkbg" style="background-image: url(images/dark0.png);">
                     <a id="darknumber" class="countertxt">0</a>
                 </div>
             </div>
@@ -57,11 +59,41 @@
         <div id="marginsplit" class="marginsplit"></div>
         <div id="settingsbuttons" style="display: inline-flex; padding: 4px;">
           <div id="hidebutton">
-            <a id="eyebutton" class="eyebtn" href="#" onclick="togglehide('settings','block')"><i class="fas fa-eye-slash"></i></a>
+            <a id="eyebutton" class="eyebtn" href="#" onclick="togglehide('settings','block')"><i class="fas fa-eye-slash" title="Hide Controls"></i></a>
           </div>
           <div class="dropdown">
-            <a id="settingsbutton" onclick="togglehide('featuresdropdown','block')" class="dropbtn"><i class="fas fa-sliders-h" alt="Settings"></i></a>
+            <a id="settingsbutton" onclick="togglehide('featuresdropdown','block')" class="dropbtn"><i class="fas fa-sliders-h" title="Settings"></i></a>
             <div id="featuresdropdown" class="dropdown-content" style="display: none;">
+              <div class="dropdown" style="width: 100%;">
+                <button onclick="togglehide('tokenlist','inline-flex')" class="button buttonu">Change Token Images</button>
+                <div id="tokenlist" class="dropdown-content" style="display: none;">
+                  <table>
+                    <tr>
+                      <th></th>
+                      <th>Default</th>
+                      <th>Alt 1</th>
+                      <th><a href="https://rpgsessions.com/" target="_blank">RPG Sessions</a></th>
+                      <th><a href="https://rpgsessions.com/" target="_blank">RPG Sessions</a></th>
+                    </tr>
+                    <tr>
+                      <th>Light</th>
+                      <td><a href="#" onclick="changeimage('light','images/light.png')"><img class="destinyexamples" src="images/light.png"></a></td>
+                      <td><a href="#" onclick="changeimage('light','images/ligh2.png')"><img class="destinyexamples" src="images/ligh2.png"></a></td>
+                      <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/eote.svg"></a></td>
+                      <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/rpg.svg"></a></td>
+                      <td>Adding custom image upload soon</td>
+                    </tr>
+                    <tr>
+                      <th>Dark</th>
+                      <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
+                      <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
+                      <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/eote.svg"></a></td>
+                      <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/rpg.svg"></a></td>
+                      <td>Adding custom image upload soon</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
               <div class="buttonblock">
                 <h2>Toggle Features</h2>
                 <button id="numbertoggle" class="button buttonu buttonf" onclick="togglehide('destinynumber','inline-block')">NUM Counter</button>
@@ -207,7 +239,6 @@
         <div id="altscriptunbind"></div>
         <script src="js/keybinds.js"></script>
         <script src="js/modals.js"></script>
-        <script src="js/dropdown.js"></script>
         <script>writekeybinds()</script>
         <script>userstate()</script>
         <script>destinycontrolhandle()</script>
