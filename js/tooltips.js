@@ -48,8 +48,12 @@ function addtooltip(elementID,text='placeholder',location='top') {
     var tooltiptext = document.createElement('span')
     tooltiptext.classList.add('tooltiptext')
     tooltiptext.classList.add('tooltiptext'+classsuffix)
-    if (text.length>64){
+    if (text.length>32 && text.length<64){
         tooltiptext.classList.add('tooltiptextwide')
+    } else if (text.length>64 && text.length<128){
+        tooltiptext.classList.add('tooltiptextwide2')
+    } else if (text.length>128){
+        tooltiptext.classList.add('tooltiptextwide3')
     }
     tooltiptext.innerText = text
     tooltip.appendChild(tooltiptext)
@@ -95,24 +99,25 @@ function infotooltips() {
         toggletooltipbutotn.innerText = 'Disable Tooltips'
         toggletooltipbutotn.classList.remove('buttonu') 
         toggletooltipbutotn.classList.add('buttonr')
-        addtooltip('adddestiny','Adds a new destiny point to the tracker.','top')
-        addtooltip('removedestiny','Removes the newest destiny point from the tracker.','bottom')
-        addtooltip('fliplight','Turns a dark side point to a light side point.','top')
-        addtooltip('flipdark','Turns a light side point to a dark side point.','bottom')
-        addtooltip('counteraddlight','Increases the used light side points counter by 1.','top')
-        addtooltip('counterremovelight','Decreases the used light side points counter by 1.','bottom')
-        addtooltip('counteradddark','Increases the used dark side points counter by 1.','top')
-        addtooltip('counterremovedark','Decreases the used dark side points counter by 1.','bottom')
-        addtooltip('counterreset','Resets the used destiny point counters.','bottom')
-        addtooltip('numbertoggle','Toggles the visibility of the number of destiny points counter.','left')
-        addtooltip('usagetrackertoggle','Toggles the visibility of the destiny point usage tracker.','left')
-        addtooltip('darktoggle','Toggles the colours between dark/light mode presets.','left')
-        addtooltip('alignrightbutton','Toggles the whole tool alighnment between right and left.','left')
+        addtooltip('adddestiny','Adds a new destiny point to the tracker.','right')
+        addtooltip('removedestiny','Removes the newest destiny point from the tracker.','right')
+        addtooltip('fliplight','Turns a dark side point to a light side point.','right')
+        addtooltip('flipdark','Turns a light side point to a dark side point.','right')
+        addtooltip('counteraddlight','Increases the used light side points counter by 1.','right')
+        addtooltip('counterremovelight','Decreases the used light side points counter by 1.','right')
+        addtooltip('counteradddark','Increases the used dark side points counter by 1.','right')
+        addtooltip('counterremovedark','Decreases the used dark side points counter by 1.','right')
+        addtooltip('counterreset','Resets the used destiny point counters.','right')
+        addtooltip('numbertoggle','Toggles the visibility of the number of destiny points counter.','right')
+        addtooltip('usagetrackertoggle','Toggles the visibility of the destiny point usage tracker.','right')
+        addtooltip('darktoggle','Toggles the colours between dark/light mode presets.','right')
+        addtooltip('alignrightbutton','Toggles the whole tool alighnment between right and left.','right')
         addtooltip('moveusedrightbutton','Moves the used destiny point tracker to the far right of the tool.','right')
         addtooltip('movenumrightbutton','Moves the number of destiny points counter to the far right of the tool.','right')
         addtooltip('movetokensrightbutton','Moves the destiny point token tray to the far right of the tool.','right')
         addtooltip('information','Shows information for how to use the tool and more.','top')
         addtooltip('download','Takes you to the download page on GitHub.','top')
+        addtooltip('eyebutton','Hide/Unhide the controls.','right')
     } else if (toggletooltipbutotn.innerText = 'Disable Tooltips'){
         cleantooltips()
     }

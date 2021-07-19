@@ -15,9 +15,11 @@
         <link rel="stylesheet" href="styles/app.css">
         <link rel="stylesheet" href="styles/tooltips.css">
         <link rel="stylesheet" href="styles/modals.css">
+        <link rel="stylesheet" href="styles/dropdown.css">
         <meta name="google-site-verification" content="JXiCPcHwWWSvY49Q13vgBNr9dVnXF40Bsi2DltOY-ek" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBKTVX6696"></script>
         <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DBKTVX6696');</script>
+        <script src="https://kit.fontawesome.com/8874fa11a1.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <script src="js/scripts.js"></script>
@@ -53,7 +55,48 @@
             </div>
         </div>
         <div id="marginsplit" class="marginsplit"></div>
-        <div id="hidebutton" class=""><a href="#" onclick="togglehide('settings','block')"><div class="eye"></div></a></div>
+        <div id="settingsbuttons" style="display: inline-flex; padding: 4px;">
+          <div id="hidebutton">
+            <a id="eyebutton" class="eyebtn" href="#" onclick="togglehide('settings','block')"><i class="fas fa-eye-slash"></i></a>
+          </div>
+          <div class="dropdown">
+            <a id="settingsbutton" onclick="togglehide('featuresdropdown','block')" class="dropbtn"><i class="fas fa-sliders-h" alt="Settings"></i></a>
+            <div id="featuresdropdown" class="dropdown-content" style="display: none;">
+              <div class="buttonblock">
+                <h2>Toggle Features</h2>
+                <button id="numbertoggle" class="button buttonu buttonf" onclick="togglehide('destinynumber','inline-block')">NUM Counter</button>
+                <br>
+                <button id="usagetrackertoggle" class="button buttonu buttonf" onclick="togglehide('destinytracker','inline-block')">USED Counter</button>
+                <br>
+                <button id="darktoggle" class="button buttonu buttonf" onclick="darkmodetoggle()">Dark Mode</button>
+                <br>
+                <button id="alignrightbutton" class="button buttonu buttonf" onclick="rightalign()">Align Right</button>
+                <br>
+                <button id="tutorialbutton" class="button buttonu buttonf" onclick="tutorial();tutorialendbutton();">Begin Tutorial</button>
+                <br>
+                <button id="toggletooltipbutotn" class="button buttonu buttonf" onclick="infotooltips();">Enable Tooltips</button>
+            </div>
+            <div class="buttonblock">
+                <h2>Move Elements</h2>
+                <button id="moveusedrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytracker')">Move USED Right</button>
+                <br>
+                <button id="movenumrightbutton" class="button buttonu buttonmove" onclick="flippos('destinynumber')">Move NUM Right</button>
+                <br>
+                <button id="movetokensrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytray')">Move Tokens Right</button>
+                <div>
+                    <h3>Eye & Setting Button</h3>
+                    <button id="eyetopleft" class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button id="eyetopright" class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
+                    <br>
+                    <button id="eyebottomleft" class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
+                    <br>
+                    <button id="hideeyebutton" class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">Hide Eye & Settings buttons</button>   
+                    <br>
+                    <button id="eyeresetbutton" class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET Buttons</button>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
         <div id="settings"> 
             <hr style="margin:0px">
             <div style="display: inline-flex;">
@@ -76,38 +119,7 @@
                             <button id="counterreset" class="button buttonu" style="width: 97%;" onclick="update_counter('reset')">Reset USED Counter</button>
                         </div>
                     </div>
-                    <div class="buttonblock">
-                        <h2>Toggle Features</h2>
-                        <button id="numbertoggle" class="button buttonu buttonf" onclick="togglehide('destinynumber','inline-block')">NUM Counter</button>
-                        <br>
-                        <button id="usagetrackertoggle" class="button buttonu buttonf" onclick="togglehide('destinytracker','inline-block')">USED Counter</button>
-                        <br>
-                        <button id="darktoggle" class="button buttonu buttonf" onclick="darkmodetoggle()">Dark Mode</button>
-                        <br>
-                        <button id="alignrightbutton" class="button buttonu buttonf" onclick="rightalign()">Align Right</button>
-                        <br>
-                        <button id="tutorialbutton" class="button buttonu buttonf" onclick="tutorial();tutorialendbutton();">Begin Tutorial</button>
-                        <br>
-                        <button id="toggletooltipbutotn" class="button buttonu buttonf" onclick="infotooltips();">Enable Tooltips</button>
-                    </div>
-                    <div class="buttonblock">
-                        <h2>Move Elements</h2>
-                        <button id="moveusedrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytracker')">Move USED Right</button>
-                        <br>
-                        <button id="movenumrightbutton" class="button buttonu buttonmove" onclick="flippos('destinynumber')">Move NUM Right</button>
-                        <br>
-                        <button id="movetokensrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytray')">Move Tokens Right</button>
-                        <div>
-                            <h3>Eye Button Movement</h3>
-                            <button id="eyetopleft" class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button id="eyetopright" class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
-                            <br>
-                            <button id="eyebottomleft" class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
-                            <br>
-                            <button id="hideeyebutton" class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">Hide eye button</button>   
-                            <br>
-                            <button id="eyeresetbutton" class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET EYE</button>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="keybindcontainer">
                     <h1 id="keybindhead">Keybinds <button id="altkeybindbutton" class="button buttong" onclick="altkeybinds()">Enable non-shift keybinds</button></h1>
@@ -164,6 +176,7 @@
             <div style="font-size: smaller;">
                 <button id="information" class="button buttonu">Information</button>
                 <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases" target="_blank"><button id="download" class="button buttonu">Download</button></a>
+                <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker#obs-open-broadcaster-software-guide" target="_blank"><button id="download" class="button buttonu">Use as an overlay or browser source</button></a>
                 <p>Created by <a href="https://aerilym.github.io/" target="_blank">Ryan Miller</a>. I also do a Star Wars RPG podcast called <a href="https://linktr.ee/AuditorsPodcast" target="_blank">Auditors of the Outer Rim</a> </p>
                 <p>I am not associated with FFG Star Wars RPG</p>
             </div>
@@ -178,7 +191,7 @@
       </div>
       <div class="modal-body">
         <p>For guides, detailed information, help, and download links head to the Github repo here: <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker" target="_blank">github.com/Aerilym/SWRPG-Destiny-Point-Tracker</a></p>
-        <p>This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, locally in a web browser, or as a browser source on <a href="https://obsproject.com/"target="_blank">OBS</a> or other streaming/webcam studio apps.</p>
+        <p>This tool can be used <a href="https://aerilym.github.io/SWRPG-Destiny-Point-Tracker/" target="_blank">online</a>, <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker#local-guide" target="_blank">locally in a web browser</a>, or as <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker#obs-open-broadcaster-software-guide"target="_blank">a browser source on OBS</a> or other streaming/webcam studio apps.</p>
         <p>Keybinds are handled by a small JavaScript library called <a href="https://craig.is/killing/mice" target="_blank">Mousetrap.js</a>. This is the only external library used.</p>
         <p>The total size of the tool is approximately 20KB.</p>
         <a href="https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/#Frequently-Asked-Questions" target="_blank"><button id="FAQ" class="button buttonu">Frequently Asked Questions</button></a>
@@ -194,19 +207,10 @@
         <div id="altscriptunbind"></div>
         <script src="js/keybinds.js"></script>
         <script src="js/modals.js"></script>
+        <script src="js/dropdown.js"></script>
         <script>writekeybinds()</script>
         <script>userstate()</script>
         <script>destinycontrolhandle()</script>
         <script>startup()</script>
-        
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.7.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.7.1/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
     </body>
 </html>

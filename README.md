@@ -4,7 +4,7 @@
 
 * [Use Online](https://aerilym.github.io/SWRPG-Destiny-Point-Tracker) - Access the full functionality of the app, use it online.
 * [Download](https://github.com/Aerilym/SWRPG-Destiny-Point-Tracker/releases) - If you download the tool you can run it locally in a web browser or in a studio program like [OBS](https://obsproject.com/).
-* [OBS Guide](#OBSGUIDE) - You can use this tool as a browser scene on [OBS](https://obsproject.com/) or similar, for use as a webcam overlay or live asset.
+* [OBS Guide](#obs-open-broadcaster-software-guide) - You can use this tool as a browser scene on [OBS](https://obsproject.com/) or similar, for use as a webcam overlay or live asset.
 * [Local Guide](#Local-Guide) - You can use the tool locally in your web browser.
 * [Keybind Guide](#keybind-guide) - You can change all the keybinds.
 * [General Modification Guide](#general-modification-guide) - Some aspects can be modified with no knowledge of programming.

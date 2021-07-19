@@ -85,29 +85,7 @@ body.darkmode a:link:active, a:visited:active {
     background-color: #008CBA;
     color: white;
 }
-  
-.eye {
-    /* SOURCE: https://codepen.io/wentin/pen/mezPVw */
-    background-color: #4d4d4d;
-    width: 16px;
-    height: 16px;
-    border: solid 2px #000;
-    border-radius: 75% 15%;
-    position: relative;
-    transform: rotate(45deg);
-}
-.eye:before {
-    /* SOURCE: https://codepen.io/wentin/pen/mezPVw */
-    content: '';
-    display: block;
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border: solid 1px #000;
-    border-radius: 50%;
-    left: 4px;
-    top: 4px;
-}
+
 
 .topleft{
     position: absolute;
@@ -203,4 +181,19 @@ body.darkmode a:link:active, a:visited:active {
 
 .hideitem{
     display: none;
+}
+
+.eyebtn {
+    color: #4d4d4d !important;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    padding: 4px;
+  }
+  
+.eyebtn:hover, .eyebtn:focus {
+color: #7e7e7e !important;
 }

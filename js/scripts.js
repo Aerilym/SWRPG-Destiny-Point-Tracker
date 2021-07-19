@@ -58,7 +58,7 @@ function checkdarkpref(){
 }
 
 function eyemover(position){
-    var eye = document.getElementById('hidebutton')
+    var eye = document.getElementById('settingsbuttons')
     if (position == 'tl'){
         eye.className = 'topleft'
     } else if (position == 'tr'){
@@ -73,24 +73,22 @@ function eyemover(position){
 }
 
 function deleteeye(source){
-    var hideeyebutton = document.getElementById('hideeyebutton')
+    var hideeyebutton = document.getElementById('settingsbuttons')
     if (source != 'key'){
-        if (document.getElementById('hidebutton').style.display == 'none'){
-            hideeyebutton.innerText = 'Hide Eye Button'
+        if (hideeyebutton.style.display == 'none'){
             var answer = true
         } else {
-            hideeyebutton.innerText = 'Show Eye Button'
-            var answer = window.confirm("Are you sure? This will hide the eye button. You will only be able to use the hotkey to hide and unhide the buttons and information (SHIFT+H)");
+            var answer = window.confirm("Are you sure? This will hide the eye & settings buttons. You will only be able to use the hotkey to hide and unhide the buttons and information (SHIFT+H). You can unhide them with (SHIFT+E)");
         }
         if (answer) {
-            togglehide('hidebutton','block')
+            togglehide('settingsbuttons','inline-flex')
             eyemover('')
         }
         else {
             console.log('no')
         }
     } else {
-        togglehide('hidebutton','block')
+        togglehide('settingsbuttons','inline-flex')
         eyemover('')
     }
 }
@@ -144,7 +142,7 @@ function userstate() {
         addtooltip('tutorialbutton','Begins a tooltip based walkthrough tutorial!','right')
         var userversion = vercookie
         if (isoldversion(userversion)){
-            console.log(newfeatures(userversion))
+            newfeatures(userversion)
         }
     }
     document.cookie = "userversion=" + version +"; expires=Thu, 18 Dec 2030 12:00:00 UTC";
@@ -165,16 +163,22 @@ function isoldversion(userversion) {
 }
 
 function newfeatures(userversion) {
-    return 'will find new features and inform user'
+    firsttime()
 }
 
 function firsttime() {
     tutorialtooltip('adddestiny','Click here to begin by adding your first destiny point!','right',function(){
-        addtooltip('tutorialbutton','You can click here to begin a short walkthrough tutorial if you want to learn about the tool and how to use it. Otherwise, have fun!','right')
-        locktooltip('tutorialbutton','onmouseover')
-        var element = document.getElementById('tutorialbutton')
-        var tooltip = element.parentNode
-        tooltip.onclick = function(){removetooltip('tutorialbutton');addtooltip('tutorialbutton','Begins a tooltip based walkthrough tutorial!','right');};
+        tutorialtooltip('hidebutton','You can hide all the buttons by clicking the eye!','right',function(){
+            tutorialtooltip('hidebutton','Click it again to show the buttons!','right',function(){
+                addtooltip('tutorialbutton','You can click here to begin a short walkthrough tutorial if you want to learn about the tool and how to use it. Otherwise, have fun!','right')
+                locktooltip('tutorialbutton','onmouseover')
+                var element = document.getElementById('tutorialbutton')
+                var tooltip = element.parentNode
+                tooltip.onclick = function(){removetooltip('tutorialbutton');addtooltip('tutorialbutton','Begins a tooltip based walkthrough tutorial!','right');};
+            }
+            )
+        }
+        )
     }
     )
 }

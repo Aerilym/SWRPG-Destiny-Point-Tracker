@@ -101,6 +101,14 @@
 }
 
 .tooltiptextwide{
-    width: 240px !important;
+    width: 250px !important;
+}
+
+.tooltiptextwide2{
+    width: 400px !important;
+}
+
+.tooltiptextwide3{
+    width: 550px !important;
 }
   
