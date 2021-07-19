@@ -211,3 +211,18 @@ color: #7e7e7e !important;
     width: 167px;
     height: 163px;
 }
+
+.urlinput{
+    margin: 0;
+    height: fit-content;
+    position: absolute;
+    width: 163px;
+}
+
+.urlinput input{
+    width: 158px
+}
+
+.urlinput input{
+    width: 158px
+}

@@ -242,10 +242,23 @@ function customtokendark(event) {
 }
 
 function customtokenurllight() {
-    var path = document.getElementById('tokenurllight2').value
+    var path = document.getElementById('tokenurllight').value
     var image = document.getElementById('customlighttokenurl');
+    var placeholdercustomlighturl = document.getElementById('placeholdercustomlighturl')
+    placeholdercustomlighturl.style.display = 'none'
     image.src = path
     image.parentNode.onclick = function(){changeimage('light',path)};
     image.parentNode.style.display = 'block'
     changeimage('light',path)
+}
+
+function customtokenurldark() {
+    var path = document.getElementById('tokenurldark').value
+    var image = document.getElementById('customdarktokenurl');
+    var placeholdercustomdarkurl = document.getElementById('placeholdercustomdarkurl')
+    placeholdercustomdarkurl.style.display = 'none'
+    image.src = path
+    image.parentNode.onclick = function(){changeimage('dark',path)};
+    image.parentNode.style.display = 'block'
+    changeimage('dark',path)
 }

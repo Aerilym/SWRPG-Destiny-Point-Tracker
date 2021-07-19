@@ -90,10 +90,11 @@
                         <a href="#" onclick="" style="display: none;"><img id="customlighttoken" class="destinyexamples" src=""></a>
                       </td>
                       <td>
-                        <form>
+                        <form class="urlinput">
                           <input id="tokenurllight" type="text" name="url"><br>
-                          <input type="button" onclick="" value="Submit">
+                          <input type="button" onclick="customtokenurllight()" value="Submit URL">
                         </form>
+                        <a id="placeholdercustomlighturl" class="placeholdercustom" style="display: block;"></a>
                         <a href="#" onclick="" style="display: none;"><img id="customlighttokenurl" class="destinyexamples" src=""></a>
                       </td>
                     </tr>
@@ -108,6 +109,14 @@
                         <label class="button buttonu buttonupload" id="customdarktokenlabel" for="filedark" style="cursor: pointer;">Upload Image</label>
                         <a id="placeholdercustomdark" class="placeholdercustom" onclick="clickID('customdarktokenlabel')" style="display: block;"></a>
                         <a href="#" onclick="" style="display: none;"><img id="customdarktoken" class="destinyexamples" src=""></a>
+                      </td>
+                      <td>
+                        <form class="urlinput">
+                          <input id="tokenurldark" type="text" name="url"><br>
+                          <input type="button" onclick="customtokenurldark()" value="Submit URL">
+                        </form>
+                        <a id="placeholdercustomdarkurl" class="placeholdercustom" style="display: block;"></a>
+                        <a href="#" onclick="" style="display: none;"><img id="customdarktokenurl" class="destinyexamples" src=""></a>
                       </td>
                     </tr>
                   </table>
