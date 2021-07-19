@@ -197,3 +197,17 @@ body.darkmode a:link:active, a:visited:active {
 .eyebtn:hover, .eyebtn:focus {
 color: #7e7e7e !important;
 }
+
+.buttonupload{
+    margin: 0;
+    padding: 4px 16px;
+    height: fit-content;
+    position: absolute;
+    width: 131px;
+}
+
+.placeholdercustom{
+    padding: 0px !important;
+    width: 167px;
+    height: 163px;
+}

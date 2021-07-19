@@ -214,3 +214,38 @@ function hasdark() {
         return true
     }
 }
+
+function customtokenlight(event) {
+	var image = document.getElementById('customlighttoken');
+    var customlighttokenlabel = document.getElementById('customlighttokenlabel')
+    var placeholdercustomlight = document.getElementById('placeholdercustomlight')
+    customlighttokenlabel.innerText = 'Upload New Image'
+    placeholdercustomlight.style.display = 'none'
+    path = URL.createObjectURL(event.target.files[0]);
+	image.src = path
+    image.parentNode.onclick = function(){changeimage('light',path)};
+    image.parentNode.style.display = 'block'
+    changeimage('light',path)
+}
+
+function customtokendark(event) {
+	var image = document.getElementById('customdarktoken');
+    var customdarktokenlabel = document.getElementById('customdarktokenlabel')
+    var placeholdercustomdark = document.getElementById('placeholdercustomdark')
+    customdarktokenlabel.innerText = 'Upload New Image'
+    placeholdercustomdark.style.display = 'none'
+    path = URL.createObjectURL(event.target.files[0]);
+	image.src = path
+    image.parentNode.onclick = function(){changeimage('dark',path)};
+    image.parentNode.style.display = 'block'
+    changeimage('dark',path)
+}
+
+function customtokenurllight() {
+    var path = document.getElementById('tokenurllight2').value
+    var image = document.getElementById('customlighttokenurl');
+    image.src = path
+    image.parentNode.onclick = function(){changeimage('light',path)};
+    image.parentNode.style.display = 'block'
+    changeimage('light',path)
+}

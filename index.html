@@ -74,6 +74,8 @@
                       <th>Alt 1</th>
                       <th><a href="https://rpgsessions.com/" target="_blank">RPG Sessions</a></th>
                       <th><a href="https://rpgsessions.com/" target="_blank">RPG Sessions</a></th>
+                      <th>Custom Upload</th>
+                      <th>Custom URL</th>
                     </tr>
                     <tr>
                       <th>Light</th>
@@ -81,7 +83,19 @@
                       <td><a href="#" onclick="changeimage('light','images/ligh2.png')"><img class="destinyexamples" src="images/ligh2.png"></a></td>
                       <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/eote.svg"></a></td>
                       <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/rpg.svg"></a></td>
-                      <td>Adding custom image upload soon</td>
+                      <td>
+                        <input type="file" accept="image/*" name="image" id="filelight" onchange="customtokenlight(event)" style="display: none;">
+                        <label class="button buttonu buttonupload" id="customlighttokenlabel" for="filelight" style="cursor: pointer;">Upload Image</label>
+                        <a id="placeholdercustomlight" class="placeholdercustom" onclick="clickID('customlighttokenlabel')" style="display: block;"></a>
+                        <a href="#" onclick="" style="display: none;"><img id="customlighttoken" class="destinyexamples" src=""></a>
+                      </td>
+                      <td>
+                        <form>
+                          <input id="tokenurllight" type="text" name="url"><br>
+                          <input type="button" onclick="" value="Submit">
+                        </form>
+                        <a href="#" onclick="" style="display: none;"><img id="customlighttokenurl" class="destinyexamples" src=""></a>
+                      </td>
                     </tr>
                     <tr>
                       <th>Dark</th>
@@ -89,7 +103,12 @@
                       <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
                       <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/eote.svg"></a></td>
                       <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/rpg.svg"></a></td>
-                      <td>Adding custom image upload soon</td>
+                      <td>
+                        <input type="file" accept="image/*" name="image" id="filedark" onchange="customtokendark(event)" style="display: none;">
+                        <label class="button buttonu buttonupload" id="customdarktokenlabel" for="filedark" style="cursor: pointer;">Upload Image</label>
+                        <a id="placeholdercustomdark" class="placeholdercustom" onclick="clickID('customdarktokenlabel')" style="display: block;"></a>
+                        <a href="#" onclick="" style="display: none;"><img id="customdarktoken" class="destinyexamples" src=""></a>
+                      </td>
                     </tr>
                   </table>
                 </div>

@@ -222,3 +222,7 @@ function destinycontrolhandle() {
 function startup() {
     addtooltip('toggletooltipbutotn','Toggles information tooltips like this on all elements!','right')
 }
+
+function clickID(itemid) {
+    document.getElementById(itemid).click();
+  }
