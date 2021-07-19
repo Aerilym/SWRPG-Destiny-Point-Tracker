@@ -1,5 +1,5 @@
 // For front end website functions -- Created by Ryan Miller https://aerilym.github.io/
-let version = '1.0.1';
+let version = '1.1.0';
 
 
 function togglehide(item, basedisplay) {
@@ -163,7 +163,7 @@ function isoldversion(userversion) {
 }
 
 function newfeatures(userversion) {
-    firsttime()
+    alert('Update: You can now change the token images to presets and custom images.')
 }
 
 function firsttime() {
