@@ -188,6 +188,7 @@ function destinycontrolhandle() {
     var removedestiny = document.getElementById('removedestiny')
     var fliplight = document.getElementById('fliplight')
     var flipdark = document.getElementById('flipdark')
+    var destinytray = document.getElementById('destinytray')
     if (hasdark() || haslight()){
         if (removedestiny.classList.contains('hideitem')) {
             removedestiny.classList.remove('hideitem')
@@ -216,6 +217,22 @@ function destinycontrolhandle() {
         if (!flipdark.classList.contains('hideitem')) {
             flipdark.classList.add('hideitem')
         }
+    }
+    var alignrightbutton = document.getElementById('alignrightbutton')
+    if (destinytray.clientHeight>400) {
+        alignrightbutton.onclick = function(){};
+        alignrightbutton.classList.add('disabledbutton')
+        var maincontent = document.getElementById('maincontent')
+        var marginsplit = document.getElementById('marginsplit')
+        var alignrightbutton = document.getElementById('alignrightbutton')
+        if (maincontent.classList.contains('topright')){
+            maincontent.classList.remove('topright');
+            marginsplit.classList.remove('marginsplit2')
+            alignrightbutton.innerText = 'Align Right'
+        }
+    } else {
+        alignrightbutton.onclick = function(){rightalign()};
+        alignrightbutton.classList.remove('disabledbutton')
     }
 }
 

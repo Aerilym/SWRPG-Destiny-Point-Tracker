@@ -86,6 +86,15 @@ body.darkmode a:link:active, a:visited:active {
     color: white;
 }
 
+.disabledbutton {
+    background-color: #4d4d4d;
+}
+
+.disabledbutton:hover {
+    background-color: #4d4d4d;
+    color: #4d4d4d;
+}
+
 
 .topleft{
     position: absolute;
