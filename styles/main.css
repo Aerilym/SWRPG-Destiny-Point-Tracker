@@ -138,6 +138,33 @@ body.darkmode a:link:active, a:visited:active {
     text-align: center;
 }
 
+.keybindtable .subth{
+    text-align: left;
+}
+
+.keybindtable kbd{
+    border: none;
+    border-radius: 4px;
+    padding: 0.25em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(215, 215, 255, 0.9);
+    color: black;
+    border: 2px solid #5a5a5a;
+    width: 8em;
+    height: 1.5em;
+}
+  
+.keybindtable kbd:hover {
+    background-color: #4d6a74;
+    color: white;
+}
+
 .symbolcontrol{
     font-size: larger;
     width: 60px;

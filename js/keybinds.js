@@ -10,6 +10,9 @@ removedestiny = ['shift+-',     '_',    '-']        //Remove destiny point
 fliptolight =   ['shift+up',    '',     'up']       //Flip dark side point to light
 fliptodark =    ['shift+down',  '',     'down']     //Flip light side point to dark
 
+binds = ['hidebuttons', 'hideeye', 'adddestiny', 'removedestiny', 'fliptolight', 'fliptodark']
+bindsmap = [hidebuttons, hideeye, adddestiny, removedestiny, fliptolight, fliptodark]
+
 //Hide/Unhide the buttons and information below the tool
 Mousetrap.bind(hidebuttons[0], function(e) {
     togglehide('settings','block')
@@ -113,27 +116,13 @@ function unbindnonshift() {
 }
 
 function writekeybinds() {
-    document.getElementById('KBadddestiny0').innerText = adddestiny[0].replace('+',' + ')
-    document.getElementById('KBadddestiny1').innerText = adddestiny[1].replace('+',' + ')
-    document.getElementById('KBadddestiny2').innerText = adddestiny[2].replace('+',' + ')
-
-    document.getElementById('KBremovedestiny0').innerText = removedestiny[0].replace('+',' + ')
-    document.getElementById('KBremovedestiny1').innerText = removedestiny[1].replace('+',' + ')
-    document.getElementById('KBremovedestiny2').innerText = removedestiny[2].replace('+',' + ')
-
-    document.getElementById('KBhidebuttons0').innerText = hidebuttons[0].replace('+',' + ')
-    document.getElementById('KBhidebuttons1').innerText = hidebuttons[1].replace('+',' + ')
-    document.getElementById('KBhidebuttons2').innerText = hidebuttons[2].replace('+',' + ')
-
-    document.getElementById('KBhideeye0').innerText = hideeye[0].replace('+',' + ')
-    document.getElementById('KBhideeye1').innerText = hideeye[1].replace('+',' + ')
-    document.getElementById('KBhideeye2').innerText = hideeye[2].replace('+',' + ')
-
-    document.getElementById('KBfliptolight0').innerText = fliptolight[0].replace('+',' + ')
-    document.getElementById('KBfliptolight1').innerText = fliptolight[1].replace('+',' + ')
-    document.getElementById('KBfliptolight2').innerText = fliptolight[2].replace('+',' + ')
-
-    document.getElementById('KBfliptodark0').innerText = fliptodark[0].replace('+',' + ')
-    document.getElementById('KBfliptodark1').innerText = fliptodark[1].replace('+',' + ')
-    document.getElementById('KBfliptodark2').innerText = fliptodark[2].replace('+',' + ')
+    var keynum = adddestiny.length
+    var numbinds = binds.length
+    for (var i = 0; i < numbinds; i++) {
+        for (var j = 0; j < keynum; j++) {
+            docbind = document.getElementById('KB' + binds[i] + j)
+            docbind.innerText = bindsmap[i][j].replace('+',' + ')
+            // tooltip.onclick = function(){Mousetrap.unbind(docbind.innerText = binds[i].replace(' + ','+'));};
+        }
+    }
 }
