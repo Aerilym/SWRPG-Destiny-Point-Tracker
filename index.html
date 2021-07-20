@@ -65,70 +65,6 @@
           <div class="dropdown">
             <a id="settingsbutton" onclick="togglehide('featuresdropdown','block')" class="dropbtn"><i class="fas fa-sliders-h" title="Settings"></i></a>
             <div id="featuresdropdown" class="dropdown-content" style="display: none;">
-              <div class="dropdown" style="width: 100%;">
-                <button onclick="togglehide('tokenlist','inline-flex')" class="button buttonu">Change Token Images</button>
-                <div id="tokenlist" class="dropdown-content" style="display: none;">
-                  <table class="tokenchangetable">
-                    <tr>
-                      <th></th>
-                      <th>Default</th>
-                      <th>Alternative 1</th>
-                      <th><a class="imagechangeheadingbuttons" href="https://linktr.ee/AuditorsPodcast" target="_blank"><img width="100%" src="images/aotortextlogo.png"></th>
-                      <th><a class="imagechangeheadingbuttons" href="https://linktr.ee/AuditorsPodcast" target="_blank"><img width="100%" src="images/aotortextlogo.png"></a></th>
-                      <th><a class="imagechangeheadingbuttons" href="https://rpgsessions.com/" target="_blank"><img width="100%" src="images/rpgsessions.png"></a></th>
-                      <th><a class="imagechangeheadingbuttons" href="https://rpgsessions.com/" target="_blank"><img width="100%" src="images/rpgsessions.png"></th>
-                      <th>Custom Upload</th>
-                      <th>Custom URL</th>
-                    </tr>
-                    <tr>
-                      <th>Light</th>
-                      <td><a href="#" onclick="changeimage('light','images/light.png')"><img class="destinyexamples" src="images/light.png"></a></td>
-                      <td><a href="#" onclick="changeimage('light','images/ligh2.png')"><img class="destinyexamples" src="images/ligh2.png"></a></td>
-                      <td><a href="#" onclick="changeimage('light','images/aotorl.png')"><img class="destinyexamples" src="images/aotorl.png"></a></td>
-                      <td><a href="#" onclick="changeimage('light','images/aotorogl.png')"><img class="destinyexamples" src="images/aotorogl.png"></a></td>
-                      <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/eote.svg"></a></td>
-                      <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/rpg.svg"></a></td>
-                      <td>
-                        <input type="file" accept="image/*" name="image" id="filelight" onchange="customtokenlight(event)" style="display: none;">
-                        <label class="button buttonu buttonupload" id="customlighttokenlabel" for="filelight" style="cursor: pointer;">Upload Image</label>
-                        <a id="placeholdercustomlight" class="placeholdercustom" onclick="clickID('customlighttokenlabel')" style="display: block;"></a>
-                        <a href="#" onclick="" style="display: none;"><img id="customlighttoken" class="destinyexamples" src=""></a>
-                      </td>
-                      <td>
-                        <form class="urlinput">
-                          <input id="tokenurllight" type="text" name="url"><br>
-                          <input id="tokenurlsublight" type="button" onclick="customtokenurllight()" value="Submit URL">
-                        </form>
-                        <a id="placeholdercustomlighturl" class="placeholdercustom" style="display: block;"></a>
-                        <a href="#" onclick="" style="display: none;"><img id="customlighttokenurl" class="destinyexamples" src=""></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Dark</th>
-                      <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
-                      <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
-                      <td><a href="#" onclick="changeimage('dark','images/aotord.png')"><img class="destinyexamples" src="images/aotord.png"></a></td>
-                      <td><a href="#" onclick="changeimage('dark','images/aotorogd.png')"><img class="destinyexamples" src="images/aotorogd.png"></a></td>
-                      <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/eote.svg"></a></td>
-                      <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/rpg.svg"></a></td>
-                      <td>
-                        <input type="file" accept="image/*" name="image" id="filedark" onchange="customtokendark(event)" style="display: none;">
-                        <label class="button buttonu buttonupload" id="customdarktokenlabel" for="filedark" style="cursor: pointer;">Upload Image</label>
-                        <a id="placeholdercustomdark" class="placeholdercustom" onclick="clickID('customdarktokenlabel')" style="display: block;"></a>
-                        <a href="#" onclick="" style="display: none;"><img id="customdarktoken" class="destinyexamples" src=""></a>
-                      </td>
-                      <td>
-                        <form class="urlinput">
-                          <input id="tokenurldark" type="text" name="url"><br>
-                          <input id="tokenurlsubdark" type="button" onclick="customtokenurldark()" value="Submit URL">
-                        </form>
-                        <a id="placeholdercustomdarkurl" class="placeholdercustom" style="display: block;"></a>
-                        <a href="#" onclick="" style="display: none;"><img id="customdarktokenurl" class="destinyexamples" src=""></a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
               <div class="buttonblock">
                 <h2>Toggle Features</h2>
                 <button id="numbertoggle" class="button buttonu buttonf" onclick="togglehide('destinynumber','inline-block')">NUM Counter</button>
@@ -139,27 +75,37 @@
                 <br>
                 <button id="alignrightbutton" class="button buttonu buttonf" onclick="rightalign()">Align Right</button>
                 <br>
-                <button id="tutorialbutton" class="button buttonu buttonf" onclick="tutorial();tutorialendbutton();">Begin Tutorial</button>
+                <button id="tutorialbutton" class="button buttonu buttonf" onclick="togglehide('featuresdropdown','block');tutorial();tutorialendbutton();">Begin Tutorial</button>
                 <br>
                 <button id="toggletooltipbutotn" class="button buttonu buttonf" onclick="infotooltips();">Enable Tooltips</button>
             </div>
             <div class="buttonblock">
-                <h2>Move Elements</h2>
-                <button id="moveusedrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytracker')">Move USED Right</button>
-                <br>
-                <button id="movenumrightbutton" class="button buttonu buttonmove" onclick="flippos('destinynumber')">Move NUM Right</button>
-                <br>
-                <button id="movetokensrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytray')">Move Tokens Right</button>
-                <div>
-                    <h3>Eye & Setting Button</h3>
-                    <button id="eyetopleft" class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button id="eyetopright" class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
-                    <br>
-                    <button id="eyebottomleft" class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
-                    <br>
-                    <button id="hideeyebutton" class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">Hide Eye & Settings buttons</button>   
-                    <br>
-                    <button id="eyeresetbutton" class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET Buttons</button>
-                </div>
+              <h2>Move Elements</h2>
+              <button id="moveusedrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytracker')">Move USED Right</button>
+              <br>
+              <button id="movenumrightbutton" class="button buttonu buttonmove" onclick="flippos('destinynumber')">Move NUM Right</button>
+              <br>
+              <button id="movetokensrightbutton" class="button buttonu buttonmove" onclick="flippos('destinytray')">Move Tokens Right</button>
+              <div style="display: none;">
+                  <h3>Eye & Setting Button</h3>
+                  <button id="eyetopleft" class="button buttonu eyemover" onclick="eyemover('tl')">TOP LEFT</button><button id="eyetopright" class="button buttonu eyemover" onclick="eyemover('tr')">TOP RIGHT</button>
+                  <br>
+                  <button id="eyebottomleft" class="button buttonu eyemover" onclick="eyemover('bl')">BOTTOM LEFT</button><button class="button buttonu eyemover" onclick="eyemover('br')">BOTTOM RIGHT</button>
+                  <br>
+                  <button id="hideeyebutton" class="button buttonu eyemover" style=" width: 140px" onclick="deleteeye()">Hide Eye & Settings buttons</button>   
+                  <br>
+                  <button id="eyeresetbutton" class="button buttonu eyemover" style=" width: 140px" onclick="eyemover('')">RESET Buttons</button>
+              </div>
+          </div>
+            <div class="buttonblock">
+              <h2>Used Counter Controls</h2>
+              <button id="counteraddlight" class="button buttong usedcountercontrol" onclick="update_counter('light','+')">+ Light</button>
+              <button id="counteradddark" class="button buttong usedcountercontrol" onclick="update_counter('dark','+')">+ Dark</button>
+              <br>
+              <button id="counterremovelight" class="button buttonr usedcountercontrol" onclick="update_counter('light','-')">- Light</button>
+              <button id="counterremovedark" class="button buttonr usedcountercontrol" onclick="update_counter('dark','-')">- Dark</button>
+              <br>
+              <button id="counterreset" class="button buttonu" style="width: 97%;" onclick="update_counter('reset')">Reset USED Counter</button>
             </div>
             </div>
           </div>
@@ -168,25 +114,78 @@
             <hr style="margin:0px">
             <div style="display: inline-flex;">
                 <div class="buttoncontainer">
-                    <div class="buttonblock">
-                        <h2>Destiny Controls</h2>
-                        <button id="adddestiny" class="button buttong symbolcontrol" onclick="add_destiny()">+</button>
-                        <button id="fliplight" class="button buttonu" onclick="flip('light')">Flip to light</button>
-                    <br>
-                        <button id="removedestiny" class="button buttonr symbolcontrol" onclick="remove_destiny()">-</button>
-                        <button id="flipdark" class="button buttonu" onclick="flip('dark')">Flip to dark</button>
-                        <div>
-                            <h2>Used Counter Controls</h2>
-                            <button id="counteraddlight" class="button buttong usedcountercontrol" onclick="update_counter('light','+')">+ Light</button>
-                            <button id="counteradddark" class="button buttong usedcountercontrol" onclick="update_counter('dark','+')">+ Dark</button>
-                            <br>
-                            <button id="counterremovelight" class="button buttonr usedcountercontrol" onclick="update_counter('light','-')">- Light</button>
-                            <button id="counterremovedark" class="button buttonr usedcountercontrol" onclick="update_counter('dark','-')">- Dark</button>
-                            <br>
-                            <button id="counterreset" class="button buttonu" style="width: 97%;" onclick="update_counter('reset')">Reset USED Counter</button>
-                        </div>
+                  <div class="dropdown" style="width: 100%; padding: 10px;">
+                    <button id="changetokensbutton" onclick="togglehide('tokenlist','inline-flex')" class="button buttonu">Change Token Images</button>
+                    <div id="tokenlist" class="dropdown-content" style="display: none;">
+                      <table class="tokenchangetable">
+                        <tr>
+                          <th></th>
+                          <th>Default</th>
+                          <th>Alternative 1</th>
+                          <th><a class="imagechangeheadingbuttons" href="https://linktr.ee/AuditorsPodcast" target="_blank"><img width="100%" src="images/aotortextlogo.png"></th>
+                          <th><a class="imagechangeheadingbuttons" href="https://linktr.ee/AuditorsPodcast" target="_blank"><img width="100%" src="images/aotortextlogo.png"></a></th>
+                          <th><a class="imagechangeheadingbuttons" href="https://rpgsessions.com/" target="_blank"><img width="100%" src="images/rpgsessions.png"></a></th>
+                          <th><a class="imagechangeheadingbuttons" href="https://rpgsessions.com/" target="_blank"><img width="100%" src="images/rpgsessions.png"></th>
+                          <th>Custom Upload</th>
+                          <th>Custom URL</th>
+                        </tr>
+                        <tr>
+                          <th>Light</th>
+                          <td><a href="#" onclick="changeimage('light','images/light.png')"><img class="destinyexamples" src="images/light.png"></a></td>
+                          <td><a href="#" onclick="changeimage('light','images/ligh2.png')"><img class="destinyexamples" src="images/ligh2.png"></a></td>
+                          <td><a href="#" onclick="changeimage('light','images/aotorl.png')"><img class="destinyexamples" src="images/aotorl.png"></a></td>
+                          <td><a href="#" onclick="changeimage('light','images/aotorogl.png')"><img class="destinyexamples" src="images/aotorogl.png"></a></td>
+                          <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/eote.svg"></a></td>
+                          <td><a href="#" onclick="changeimage('light','https://unbound-legends.imgix.net/story-points/player/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/player/rpg.svg"></a></td>
+                          <td>
+                            <input type="file" accept="image/*" name="image" id="filelight" onchange="customtokenlight(event)" style="display: none;">
+                            <label class="button buttonu buttonupload" id="customlighttokenlabel" for="filelight" style="cursor: pointer;">Upload Image</label>
+                            <a id="placeholdercustomlight" class="placeholdercustom" onclick="clickID('customlighttokenlabel')" style="display: block;"></a>
+                            <a href="#" onclick="" style="display: none;"><img id="customlighttoken" class="destinyexamples" src=""></a>
+                          </td>
+                          <td>
+                            <form class="urlinput">
+                              <input id="tokenurllight" type="text" name="url"><br>
+                              <input id="tokenurlsublight" type="button" onclick="customtokenurllight()" value="Submit URL">
+                            </form>
+                            <a id="placeholdercustomlighturl" class="placeholdercustom" style="display: block;"></a>
+                            <a href="#" onclick="" style="display: none;"><img id="customlighttokenurl" class="destinyexamples" src=""></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Dark</th>
+                          <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
+                          <td><a href="#" onclick="changeimage('dark','images/dark0.png')"><img class="destinyexamples" src="images/dark0.png"></a></td>
+                          <td><a href="#" onclick="changeimage('dark','images/aotord.png')"><img class="destinyexamples" src="images/aotord.png"></a></td>
+                          <td><a href="#" onclick="changeimage('dark','images/aotorogd.png')"><img class="destinyexamples" src="images/aotorogd.png"></a></td>
+                          <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/eote.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/eote.svg"></a></td>
+                          <td><a href="#" onclick="changeimage('dark','https://unbound-legends.imgix.net/story-points/gm/rpg.svg')"><img class="destinyexamples" src="https://unbound-legends.imgix.net/story-points/gm/rpg.svg"></a></td>
+                          <td>
+                            <input type="file" accept="image/*" name="image" id="filedark" onchange="customtokendark(event)" style="display: none;">
+                            <label class="button buttonu buttonupload" id="customdarktokenlabel" for="filedark" style="cursor: pointer;">Upload Image</label>
+                            <a id="placeholdercustomdark" class="placeholdercustom" onclick="clickID('customdarktokenlabel')" style="display: block;"></a>
+                            <a href="#" onclick="" style="display: none;"><img id="customdarktoken" class="destinyexamples" src=""></a>
+                          </td>
+                          <td>
+                            <form class="urlinput">
+                              <input id="tokenurldark" type="text" name="url"><br>
+                              <input id="tokenurlsubdark" type="button" onclick="customtokenurldark()" value="Submit URL">
+                            </form>
+                            <a id="placeholdercustomdarkurl" class="placeholdercustom" style="display: block;"></a>
+                            <a href="#" onclick="" style="display: none;"><img id="customdarktokenurl" class="destinyexamples" src=""></a>
+                          </td>
+                        </tr>
+                      </table>
                     </div>
-                    
+                  </div>
+                  <div class="buttonblock">
+                      <h2>Destiny Controls</h2>
+                      <button id="adddestiny" class="button buttong symbolcontrol" onclick="add_destiny()">+</button>
+                      <button id="fliplight" class="button buttonu" onclick="flip('light')">Flip to light</button>
+                  <br>
+                      <button id="removedestiny" class="button buttonr symbolcontrol" onclick="remove_destiny()">-</button>
+                      <button id="flipdark" class="button buttonu" onclick="flip('dark')">Flip to dark</button>
+                  </div>
                 </div>
                 <div class="keybindcontainer">
                     <h1 id="keybindhead">Keybinds <button id="altkeybindbutton" class="button buttong" onclick="altkeybinds()">Enable non-shift keybinds</button></h1>

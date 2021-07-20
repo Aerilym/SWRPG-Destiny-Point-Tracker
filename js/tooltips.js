@@ -48,11 +48,13 @@ function addtooltip(elementID,text='placeholder',location='top') {
     var tooltiptext = document.createElement('span')
     tooltiptext.classList.add('tooltiptext')
     tooltiptext.classList.add('tooltiptext'+classsuffix)
+    console.log(text.length)
     if (text.length>32 && text.length<64){
         tooltiptext.classList.add('tooltiptextwide')
     } else if (text.length>64 && text.length<128){
         tooltiptext.classList.add('tooltiptextwide2')
-    } else if (text.length>128){
+    } else if (text.length>120){
+        console.log('LONGGGG')
         tooltiptext.classList.add('tooltiptextwide3')
     }
     tooltiptext.innerText = text
