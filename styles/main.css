@@ -226,3 +226,12 @@ color: #7e7e7e !important;
 .urlinput input{
     width: 158px
 }
+
+.tokenchangetable th{
+    max-height: 96px;
+    height: 96px;
+}
+
+.imagechangeheadingbuttons{
+    height: 72px;
+}
