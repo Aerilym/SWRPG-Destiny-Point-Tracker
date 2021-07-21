@@ -73,6 +73,7 @@ This works with the online version or a downloaded version.
 
 ### Keybind Guide
 
+NOTE: As of v1.2.0 keybinds can now be changed and customised right in the tool by clicking the bind.
 NOTE: If a keybind isn't working, try using `ctrl` in place of `shift`. Eg. Instead of `shift + up` try `ctrl + up`. I'm honestly not sure why this happens, but I've found when using it in an OBS browser source `shift` is replaced with `ctrl` for the keybinds, I think this is either an OBS issue or a windows issue.
 
 * You can change any keybind by going to `js/keybinds.js` and changing the respective keybind as defined in the top definition block (NOTE: the keybind table on the page will update with any changes as it is dynamic, check the table to see if your keybinds are shown.):
