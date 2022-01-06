@@ -11,7 +11,7 @@ hidebuttons =   ['shift+h',     '',     'h']        //Hide/Unhide buttons
 hideeye =       ['shift+e',     '',     'e']        //Hide/Unhide eye button
 toggleused =    ['shift+u',     '',     'u']        //Hide/Unhide used counter
 togglenum =     ['shift+n',     '',     'n']        //Hide/Unhide num counter
-toggleshift =   ['shift+t',     '',     't']        //Toggle non-shift keybinds
+toggleshift =   ['t',     '',     't']        //Toggle non-shift keybinds
 resetused =     ['shift+i',     '',     'i']        //Reset used counter
 
 
