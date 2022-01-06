@@ -9,9 +9,14 @@ fliptolight =   ['shift+up',    '',     'up']       //Flip dark side point to li
 fliptodark =    ['shift+down',  '',     'down']     //Flip light side point to dark
 hidebuttons =   ['shift+h',     '',     'h']        //Hide/Unhide buttons
 hideeye =       ['shift+e',     '',     'e']        //Hide/Unhide eye button
+toggleused =    ['shift+u',     '',     'u']        //Hide/Unhide used counter
+togglenum =     ['shift+n',     '',     'n']        //Hide/Unhide num counter
+toggleshift =   ['shift+t',     '',     't']        //Toggle non-shift keybinds
+resetused =     ['shift+i',     '',     'i']        //Reset used counter
 
-binds = ['adddestiny', 'removedestiny', 'fliptolight', 'fliptodark', 'hidebuttons', 'hideeye']
-bindsmap = [adddestiny, removedestiny, fliptolight, fliptodark, hidebuttons, hideeye]
+
+binds = ['adddestiny', 'removedestiny', 'fliptolight', 'fliptodark', 'hidebuttons', 'hideeye', 'toggleused', 'togglenum', 'toggleshift', 'resetused']
+bindsmap = [adddestiny, removedestiny, fliptolight, fliptodark, hidebuttons, hideeye, toggleused, togglenum, toggleshift, resetused]
 
 //Adds a destiny point to the tracker
 function bindadddestiny(keybinds) {
@@ -104,6 +109,70 @@ function bindhideeye(keybinds) {
     }
 }
 
+//Hide/Unhide the used counter
+function bindtoggleused(keybinds) {
+    if (keybinds.length == 1) {
+        keybinds.push('')
+    }
+    for (var i = 0; i < keybinds.length-1; i++) {
+        if (keybinds[i] != '') {
+            Mousetrap.bind(keybinds[i], function(e) {
+                togglehide('destinytracker','inline-block')
+                return false;
+            });
+        }
+    }
+    
+}
+
+//Hide/Unhide the num counter
+function bindtogglenum(keybinds) {
+    if (keybinds.length == 1) {
+        keybinds.push('')
+    }
+    for (var i = 0; i < keybinds.length-1; i++) {
+        if (keybinds[i] != '') {
+            Mousetrap.bind(keybinds[i], function(e) {
+                togglehide('destinynumber','inline-block')
+                return false;
+            });
+        }
+    }
+    
+}
+
+//Toggle non-shift keybinds
+function bindtoggleshift(keybinds) {
+    if (keybinds.length == 1) {
+        keybinds.push('')
+    }
+    for (var i = 0; i < keybinds.length-1; i++) {
+        if (keybinds[i] != '') {
+            Mousetrap.bind(keybinds[i], function(e) {
+                altkeybinds()
+                return false;
+            });
+        }
+    }
+    
+}
+
+//Reset used counter
+function bindusedreset(keybinds) {
+    if (keybinds.length == 1) {
+        keybinds.push('')
+    }
+    for (var i = 0; i < keybinds.length-1; i++) {
+        if (keybinds[i] != '') {
+            Mousetrap.bind(keybinds[i], function(e) {
+                update_counter('reset')
+                return false;
+            });
+        }
+    }
+    
+}
+
 Mousetrap.bind('up up down down left right left right b a enter', function() {
     alert('nice')
 });
@@ -115,6 +184,10 @@ function setkeybinds(keybindsmap) {
     bindfliptodark(keybindsmap[3])
     bindhidebuttons(keybindsmap[4])
     bindhideeye(keybindsmap[5])
+    bindtoggleused(keybindsmap[6])
+    bindtogglenum(keybindsmap[7])
+    bindtoggleshift(keybindsmap[8])
+    bindusedreset(keybindsmap[9])
 }
 setkeybinds(bindsmap)
 
@@ -156,6 +229,26 @@ function bindnonshift() {
         flip('dark')
         return false;
     });
+
+    Mousetrap.bind(toggleused[2], function(e) {
+        togglehide('destinytracker','inline-block')
+        return false;
+    });
+
+    Mousetrap.bind(togglenum[2], function(e) {
+        togglehide('destinynumber','inline-block')
+        return false;
+    });
+
+    Mousetrap.bind(toggleshift[2], function(e) {
+        altkeybinds()
+        return false;
+    });
+
+    Mousetrap.bind(resetused[2], function(e) {
+        update_counter('reset')
+        return false;
+    });
 }
 
 //Unbinds Non-shift keybinds when called
@@ -166,6 +259,10 @@ function unbindnonshift() {
     Mousetrap.unbind(hideeye[2]);
     Mousetrap.unbind(fliptolight[2]);
     Mousetrap.unbind(fliptodark[2]);
+    Mousetrap.unbind(toggleused[2]);
+    Mousetrap.unbind(togglenum[2]);
+    Mousetrap.unbind(toggleshift[2]);
+    Mousetrap.unbind(resetused[2]);
 }
 
 //Umbinds Non-shift keybinds when called
